@@ -331,10 +331,8 @@ Use $\backslash$useyear\{<year>\} to set year.
 
   \noindent
   Department of Computer Science\\
-  and Media Technology\\
-  Gj\o{}vik University College\\
+  Norwegian University of Science and Technology
   Box 191\\
-  N-2802 Gj\o{}vik\\
   Norway
 }
 
@@ -380,6 +378,17 @@ Use $\backslash$useyear\{<year>\} to set year.
     5 ECTS\\
     Department of Computer Science and Media Technology\\
     Gj\o{}vik University College, \gmt@frontpagesyear
+  }
+  \renewcommand\gmt@secondpagetext{\gmt@imttext}
+}
+
+\DeclareOption{macs}{%
+  \renewcommand\gmt@firstpagetext{%
+    Master's Thesis Project Plan\\
+    Master of Applied Computer Science\\
+    5 ECTS\\
+    Department of Computer Science\\
+    Norwegian University of Science and Technology, \gmt@frontpagesyear
   }
   \renewcommand\gmt@secondpagetext{\gmt@imttext}
 }
