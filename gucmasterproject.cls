@@ -77,7 +77,7 @@
 
 %% CLASS FILE COMMANDS
 
-\LoadClass[twoside]{report}
+\LoadClass[oneside, openany]{report}
 
 %% PACKAGE LOADING
 
@@ -323,7 +323,7 @@ Use $\backslash$useyear\{<year>\} to set year.
   \noindent
   Avdeling for\\
   informatikk og medieteknikk\\
-  H\o{}gskolen i Gj\o{}vik\\
+  NTNU i Gj\o{}vik\\
   Postboks 191\\
   2802 Gj\o{}vik
 
