@@ -77,7 +77,7 @@
 
 %% CLASS FILE COMMANDS
 
-\LoadClass[oneside, openany]{report}
+\LoadClass[twoside]{report}
 
 %% PACKAGE LOADING
 
@@ -342,7 +342,7 @@ Use $\backslash$useyear\{<year>\} to set year.
   \renewcommand\gmt@firstpagetext{%
     Masteroppgave prosjektbeskrivelse\\
     Master i Teknologi - Medieteknikk\\
-    5 ECTS\\
+    7.5 ECTS\\
     Avdeling for informatikk og medieteknikk\\
     H\o{}gskolen i Gj\o{}vik, \gmt@frontpagesyear
   }
@@ -386,7 +386,7 @@ Use $\backslash$useyear\{<year>\} to set year.
   \renewcommand\gmt@firstpagetext{%
     Master's Thesis Project Plan\\
     Master of Applied Computer Science\\
-    5 ECTS\\
+    7.5 ECTS\\
     Department of Computer Science\\
     Norwegian University of Science and Technology, \gmt@frontpagesyear
   }

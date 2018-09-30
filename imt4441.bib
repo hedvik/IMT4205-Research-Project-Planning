@@ -1,3 +1,278 @@
+% Literature Search: Gain thresholds - Google Scholar database
+@article{schmitz2018you,
+  title={You spin my head right round: Threshold of limited immersion for rotation gains in redirected walking},
+  author={Schmitz, Patric and Hildebrandt, Julian and Valdez, Andr{\'e} Calero and Kobbelt, Leif and Ziefle, Martina},
+  journal={IEEE transactions on visualization and computer graphics},
+  volume={24},
+  number={4},
+  pages={1623--1632},
+  year={2018},
+  publisher={IEEE},
+  notes={
+ Introduction
+   * Besides establishing detection thresholds, it is also important to know when the user's immersion breaks.
+   * Paper hypothesizes that degree of unnoticed manipulation is significantly different from the detection threshold when the user is immersed in a task
+      * (Distractors can help improve immersion, giving the user a task like playing a game also makes them more immersed)
+   * Previous research on thresholds for the allowed degree of motion manipulation has measured perceptual detection thresholds in controlled psychophysical experiments.
+      * While this is a useful basic metric to establish a lower bound on the allowed degree of redirection, the paper argues that additional metrics are required to judge redirection techniques in real world applications
+   * Proposes the threshold of limited immersion (TLI) as a complementary metric.
+   * Paper presents results of three studies
+      * a study on the methodical development of a paradigm to assess the TLI
+      * a study to apply the method for measuring TLI using slowly varying rotational gains during a search and collect task
+      * the third study is a control/baseline measurement of cybersickness induced by the experimental setup with no redirection applied
+Related Work
+   * Contains sections on Spatial Compression Methods, Human Factors and Perception, Terminology: Presence and Immersion, Detection Thresholds and Breaks in Presence, Cybersickness
+   * Cybersickness
+      * Cybersickness occurs because of conflicts between the visual and vestibular system, because the users do not (yet) possess mechanisms to maintain postural stability, or because adverse input tricks the body into thinking that it ingested something poisonous. 
+      * Gender, age or prior exposure account for emergence of cybersickness
+      * Women due to their larger field of view have to handle more visual input in comparison to men
+         * (would this correlate with Bjørn's thoughts that FoV might affect redirection?)
+         * (Regardless, the FoV of the screen would be the same for both genders though)
+      * immersion should be seen as a third dimension after detection and cybersickness thresholds
+Hypotheses and Logic of Empirical Procedure
+   * Authors believe that no single spatial compression method will cover everything. A synergistic combination of different redirection methods is necessary
+   * Two existing methods to assess how much redirection we can do is Detection Thresholds(DT) and breaks in presence(BIP)
+      * DT is measured in a controlled setting using a established 2AFC paradigm for measuring psychophysical thresholds. 
+      * BIP are generally measured through verbal exclamation. They capture the point in time where the presence degrades from a high to low state
+   * Threshold of limited immersion
+      * requires a measurement procedure where participants actively report an effect, even if they are not directly informed about it
+      * users are not asked if they can reliably detect a manipulation, but rather when they actually feel that a manipulation interferes with the quality of their experience
+      * TLI should be seen as a complimentary metric for detection thresholds
+   * (Sample sizes are relatively small: (1: 16, 2: 35, 3: 10). Given that it is a VR experiment, it is hard to criticize that though. What the population was and how it was sampled is not mentioned though)
+Experiments
+   * Samsung GearVR used for measurement
+      * (Not ideal due to the 60hz refresh rate and not being connected to powerful hardware)
+   * 3m x 4m tracking area
+   * Headphones with ambient noise was used as being without made it easier to detect when the users were close to a wall
+   * Subjects were not informed beforehand that their rotation would be manipulated, only that they might get nauseous and that they should feel free to quit the experiment if they felt too uncomfortable. They could take a break at any time and were offered sweets and water
+   * No compensation was given. Participants with a history of epilepsy and pregnant women were excluded
+Experiment 1
+   * Participants would press a button if the virtual environment "felt strange or unnatural"
+   * Semi structured interviews after the experiment to examine in detail why the button was pressed and informed the participant about the rotational gains.
+   * a fair amount of participants seem to have struggled to understand when to report inconsistencies. They were thus asked to mention it verbally instead of pressing a button if they noticed anything. 
+      * they were also asked to think aloud 
+   * In the end, there were some limitations with the results that the authors wanted to address for the next iteration.
+Experiment 2
+   * Pre questionnaire, VR task and post questionnaire
+   * to check whether individual factors had impact on thresholds for rotational gains the paper measured
+      * demographical data like age, gender, education and pupil distance
+      * personality factors like self efficacy with technology and the ability of mental rotation using the paper folding test
+      * VR related factors like the tendency to percieve immersion, experience with VR/AR technology, tolerance towards nausea inducing activities like reading when being driven by a car
+   * Results show that TLI is not equivalent to the detection threshold. 
+   * users were not really disturbed by high gains
+   * Individual TLI is pretty diverse
+   * (I dont feel like they described the definition for the TLI well enough for me to understand it)
+   * In general, there seems to be a individual robustness to rotary manipulation
+General discussion
+   * TLI is assessed by adapting how a break of immersion is reported.
+   * With the final procedure, subjects reported the break in immersion as soon as they noticed it, which was validated by applying the method and interviewing participants about their reporting behaviour after the experiment. 
+   * High gains do not break immersion as easily as gains below 1
+   * The control experiment did not yield any significant cybersickness so cybersickness in general for experiment 2 was attributed to rotational gain. 
+Limitations
+   * more than half of the trials ended up at a gain of 2.0 is unsatisfying. There has to be some biased factors due to that
+   * slowly decreasing and increasing rotational gain does not allow for a direct comparison with the established detection thresholds. 
+   * the proposed method of assessing TLI is arguably too time consuming and costly. Thinking aloud requires too much attention of the examiner. 
+   * there might be examiner bias when using this procedure. 
+   * the sample was too homogenous
+Conclusion
+  * TLI was proposed. 
+  * users report a subjective break in immersion without being informed about the applied manipulation. 
+  * findings contribute to spatial compression by proposing an additional quality of user experience. This helps understanding the limitations of effective spatial compression with respect to user diversity and enables larger virtual environments to be explored in limited spaces
+    * (does it enable larger virtual environments to be explored in limited spaces though? To my understanding this just provided an additional quality measure with its fair share of limitations) 
+  * (I spent way too much time reading this + writing notes (~4 hours) so some optimizing might be in order)
+    * (Focus on abstract/introduction/conclusion first)
+  }
+}
+
+@inproceedings{hildebrandt2018get,
+  title={Get Well Soon! Human Factors’ Influence on Cybersickness After Redirected Walking Exposure in Virtual Reality},
+  author={Hildebrandt, Julian and Schmitz, Patric and Valdez, Andr{\'e} Calero and Kobbelt, Leif and Ziefle, Martina},
+  booktitle={International Conference on Virtual, Augmented and Mixed Reality},
+  pages={82--101},
+  year={2018},
+  organization={Springer},
+  notes = {
+  (Just a side note, a fair amount of the authors here are part of the first paper as well)
+  Abstract
+   * predictors for cybersickness are not sufficiently explored when redirection is applied
+   * User study was conducted with semi-structured interviews to get quantitative and qualitative results in this domain. 
+   * Results show that cybersickness arises, but also eases ten minutes after the exposure
+      * (Both me and PMS were sick for several hours after Bjørn's experiment though!)
+   * Quantitative results show that a tolerance for cybersickness might be related to self-efficacy constructs and therefore be learnable or trainable
+   * Qualitative results indicate that cybersickness is dependent on factors like intensity and duration
+  Introduction
+   * Influence of human factors on cybersickness is examined
+  Related Work
+   * The sensory conflict theory suggests that a mismatch between diferent sensory subsystems causes symptoms of cybersickness
+     * While commonly employed to explain symptoms, the theory has been criticized for it’s lack of predictive power
+   * Experience with VR can be a factor in cybersickness
+   * Scene complexity and realism can increase discomfort
+   * Distractors
+      * Dynamically moving objects or agents are used to block the path of the user and induce a turning motion. 
+      * Scene manipulations while the user is distracted also works
+   * (The studies of Steinicke et al and Razzaque et all are brought up in a lot of these RW papers)
+  Methods
+   * Experiment design was equivalent to the one described in Schmitz et al's study
+   * Sample of 52 participants
+      * 12 participants aborted the experiment before getting to the final condition due to cybersickness
+   * Participants were informed that they should stop the experiment if they felt uncomfortable, but were not informed of the redirection technique
+  Discussion
+   * sample was homogenous
+   * previous findings that women tend to be more susceptible to cybersickness was replicated
+      * authors dont know if this is reporting bias or not
+  Conclusion
+   * Experiment consisted of collecting virtual pillars as long as they percieve motion as natural
+      * (This is pretty similar to the first study they did)
+   * Before, right after and 10 minutes after were the times where cybersickness was measured using the SSQ method
+   * Authors came to the conclusion that cybersickness and limited immersion are thresholds that need to be considered when implementing redirected walking algorithms
+      * (This paper came after their study in the threshold on limited immersion)
+  * (Both of the papers by these authors used dynamic gains so they did not really look at specific threshold levels that would keep the user comfortable)
+  * (They keep mentioning that women might get cybersickness more easily than men due to having a wider field of view, but the monitor itself has the same field of view for both. Do they mean it in the relation that the "projection" of everything is slightly different due to the difference in physical field of view?)
+  * (They also forgot to mention what VR headset they used for testing, but I would imagine this is the same as their previous study which used a Samsung Gear VR. This still isn't exactly the best hardware to test with)
+  }
+}
+
+@mastersthesis{fuglestad2018redirected,
+  title={Redirected Walking, an Investigation into Noticeable, but Usable Gains and the Role of Hardware in Threshold Detection},
+  author={Fuglestad, Bj{\o}rn N{\o}dland},
+  year={2018},
+  school={NTNU},
+  notes= {Bjørn's master thesis}
+}
+
+@article{norouzi2018assessing,
+  title={Assessing Vignetting as a Means to Reduce VR Sickness During Amplified Head Rotations},
+  author={Norouzi, Nahal and Bruder, Gerd and Welch, Greg},
+  year={2018},
+  abstract={
+  *  Redirected and amplified head movements have the potential to
+provide more natural interaction with virtual environments (VEs)
+than using controller-based input, which causes large discrepancies
+between visual and vestibular self-motion cues and leads to
+increased VR sickness. 
+  * However, such amplified head movements
+may also exacerbate VR sickness symptoms over no amplification.
+Several general methods have been introduced to reduce VR sickness
+for controller-based input inside a VE, including a popular
+vignetting method that gradually reduces the field of view.
+  * In this paper, we investigate the use of vignetting to reduce VR
+sickness when using amplified head rotations instead of controllerbased
+input. We also investigate whether the induced VR sickness
+is a result of the user’s head acceleration or velocity by introducing
+two different modes of vignetting, one triggered by acceleration and
+the other by velocity. 
+   * Our dependent measures were pre and post
+VR sickness questionnaires as well as estimated discomfort levels
+that were assessed each minute of the experiment. Our results show
+interesting effects between a baseline condition without vignetting,
+as well as the two vignetting methods, generally indicating that
+the vignetting methods did not succeed in reducing VR sickness for
+most of the participants and, instead, lead to a significant increase.
+We discuss the results and potential explanations of our findings.
+  },
+  notes= {
+  * (sample of 15 people might make it a bit hard to draw the conclusion that Vignetting(Adapting FOV) makes people more sick, even though the majority did better without)
+Introduction
+  * "Comfort Modes" have been used in the gaming industry to reduce VR sickness for controller-based input
+     * Includes gradual reduction of FOV,(sometimes called vignetting) as well as blurring of the view and rotation snapping techniques.
+     * Google Earth VR also makes use of a similar vignetting method for its comfort mode. 
+     * All these comfort modes have primarily been used for controller based input. This paper looks into whether it is as useful amplified head rotations.
+     * Two vignette methods presented which are based on velocity and accelleration
+        * (Aren't the comfort modes static FOV reductions though? Might dynamically changing the FOV result in more confusion/sickness?)
+        * (edit: seems like related work has made use of variable FOV reductions to some success when using controller-based input)
+Related Work
+   * Detectability of the rotation amplification and its relationship with different FOVs has been the focus of several researchers(see paper for these citations). * VR sickness/cybersickness has many similarities with simulator sickness and motion sickness although different people experience it differently based on their level of susceptibility to it. 
+      * Eye strain, stomach awareness, dizziness, nausea and headaches are common symptoms of VR sickness
+   * Age, gender and illness might separately affect how susceptible one is to VR sickness.
+   * Research has shown that smaller FOVs is positively correlated with reduction in VR sickness. It also reduces the user's sense of presence though
+      * Bolas et al. patented the approach to gradually reduce the FOV only in situations that are known to cause VR sickness, such as when using a controller based input
+      * Fernandes and Feiner tried vignette-based FOV reduction depending on angular velocity speed up. Reduction in discomfort was significant for controller-based input.
+   * Based on the anecdotal results of some previous studies. The authors were interested in seeing whether velocity or acceleration based vignetting had a significant effect on VR sickness during amplified head rotations. 
+Implementation
+   * rotation gains were only applied for yaw rotations(y axis)
+Experiment
+   * 18 participants were recruited
+      * all affiliated with the related institution
+      * (no mention of sampling method)
+      * 3 participants were removed as they had variables affecting their test results like being too sensitive to the VE and being rather exhausted before starting. 
+      * final sample: 15 participants
+   * HTC Vive used for the experiment
+   * (General description of technology used is pretty good here compared to other papers at least. I wont mention the details here as it isn't necessarily relevant for the literature review though)
+   * A virtual butterfly was used as a visual target to communicate rotation tasks
+      * (This could kind of count as a distractor)
+Experiment Methods
+   * Three conditions
+      * Control condition without vignetting, velocity based vignetting and acceleration based vignetting
+      * order of conditions were randomized over the three consequtive days that the experiment took place
+         * (sounds good)
+         * The participants also had to rank their preferred one from the three they tried
+   * VR sickness, discomfort, presence, preference and task performance were measured with the following:
+      * SSQ to measure the level of VR sickness. This was filled out before and after each condition
+      * DS(discomfort score) to measure the participants' sense of discomfort after each minute of the experience. (Asking the participant in the VE to answer how sick they felt on a scale from 0 to 10). This was answered verbally
+      * SUS(Slater-Usoh-Steed) to measure sense of presence. This questionnaire was filled out after each condition
+      * PR(preferred method of interaction): a ranking of each method 
+      * PE: percentage of time when each participant was able to see the butterfly in their visual field.
+         * This is an objective measure of whether the conditions had an effect on the task performance
+    * Qualitative feedback was also gathered after the experiment where the participants were asked to give their impression of what might have caused them the discomfort.
+       * (in this regard, it kind of makes sense to have a lower sample size as a lot of time was spent with each of them)
+    * A gain of 3 on the yaw was used to allow participants to rotate 360 degrees without rotating their body at all
+       * This was done to elicit noticeable sensory conflicts between the visual and vestibuar system for all users independent of their individual sensitivity threshold. 
+Results
+   * Sample is split into two groups
+      * Group 1 with 11 participants that only showed detriments in terms of discomfort when using vignetting
+      * Group 2 with 4 participants that had benefits in either vignetting conditions
+   * (full results are seen in the paper)
+Discussion
+   * Authors were surprised to see that the majority experienced significantly more VR sickness for the vignette methods. 
+   * They believe it is related to the differences in how we explore and visually scan a VE when using our heads compared to a hand held controller
+   * Anecdotal observation: none of the participants noticed that head rotations were amplified.
+      * It was surprising to see this since the gain was very high and far above the detection thresholds
+Conclusion
+   * To summarize, the results indicate that neither velocity or acceleration based vignetting help with reduction of VR sickness and instead lead to a significant increase in sickness symptoms for 11/15 participants. 
+  }
+}
+
+
+
+% Somewhat relevant papers, but not entirely - Google Scholar database
+@article{norouzi2018augmented,
+  title={Augmented Rotations in Virtual Reality for Users with a Reduced Range of Head Movement},
+  author={Norouzi, N and B{\"o}lling, L and Bruder, G and Welch, G},
+  year={2018},
+  abstract={
+  * A large body of research in the field of virtual reality (VR) is focused on making user interfaces more natural and intuitive by leveraging natural body movements to explore a virtual environment.
+     * For example, head-tracked user interfaces allow users to naturally look around a virtual space by moving their head. 
+     * However, such approaches may not be appropriate for users with temporary or permanent limitations of their head movement. 
+  * In this paper, we present techniques that allow these users to get full-movement benefits from a reduced range of physical movements. 
+     * Specifically, we describe two techniques that augment virtual rotations relative to physical movement thresholds.
+     * We describe how each of the two techniques can be implemented with either a head tracker or an eye tracker, e.g., in cases when no physical head rotations are possible. 
+     * We discuss their differences and limitations and we provide guidelines for the practical use of such augmented user interfaces.
+  },
+  notes={
+  * (This might be slightly outside the topic area)
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% Template Related
 @article{avizienis2004,
 author = {Algirdas Avizienis and Jean-Claude Laprie and Brian Randell and Carl Landwehr},
 journal = {IEEE Transactions on dependable and secure computing},
