@@ -181,7 +181,8 @@ Introduction
         * (Aren't the comfort modes static FOV reductions though? Might dynamically changing the FOV result in more confusion/sickness?)
         * (edit: seems like related work has made use of variable FOV reductions to some success when using controller-based input)
 Related Work
-   * Detectability of the rotation amplification and its relationship with different FOVs has been the focus of several researchers(see paper for these citations). * VR sickness/cybersickness has many similarities with simulator sickness and motion sickness although different people experience it differently based on their level of susceptibility to it. 
+   * Detectability of the rotation amplification and its relationship with different FOVs has been the focus of several researchers(see paper for these citations). 
+   * VR sickness/cybersickness has many similarities with simulator sickness and motion sickness although different people experience it differently based on their level of susceptibility to it. 
       * Eye strain, stomach awareness, dizziness, nausea and headaches are common symptoms of VR sickness
    * Age, gender and illness might separately affect how susceptible one is to VR sickness.
    * Research has shown that smaller FOVs is positively correlated with reduction in VR sickness. It also reduces the user's sense of presence though
@@ -812,7 +813,127 @@ Results
   year={2018},
   organization={ACM},
   notes={
-  * (TOREAD: this study seems to have arrived at similar ideas to what I mention as a game idea in one of the earlier notes for integrated distractors/deterrents)
+ Abstract:
+   * Redirection often require rapid head rotation, sometimes induced by distractors for everything to work.
+   * design methodology presented for redirection that takes advantage of inattentional blindness
+   * less dizziness was shown to take place when using methods presented in this paper
+ Introduction:
+   * If the user cannot naturally move and engage with a VE the presence might break. 
+   * Research suggests that users navigate best when they have vestibular and proprioceptive system feedback from instances like real walking.
+   * Locomotion techniques that stimulate these systems are also less likely to cause VR sickness compared to other interfaces that do not stiulate them
+       * (Citations given)
+   * Resets can disrupt the experience. Presence and immersion can be compromised.
+   * Peck et al.'s distractor's usefulness is weakened as it disrupts the experience and requires the user to be trained to follow it. 
+   * General purpose distractors that effectively serve their purpose, but intrude upon the scenario context, interrupt the flow of the narrative and can break the user's sense of presence
+   * These problems can be overcome by integrating distractors into the narrative and making them part of the main activity in the virtual world
+      * (This is an important statement. Can be used for arguing the importance of integrating distractors into the experience)
+   * In this study's design, the distractors are what make the experience interactive and engaging. 
+      * Hence they are now referred to as attractors(in this paper forwards)
+   * Makes use of inattentional blindness[11] and some aspects of how the human visual system[37] functions to design interaction which allows for imperceptible rotation when needed. 
+   * Unlike previous distractor based methods(Peck's improved redirection with distractors), the authors' methods do not use continuous VE rotation. 
+   * Inattentional blindness
+      * the user does not perceive items that are in plain view when they are focused on a different task. 
+   * Four visibility control techniques presented to work with embedded attractors
+      * Reduced field of view
+         * (How do their results relate to the vignetting study?)
+      * Limited viewing distance
+      * tilted viewing angle 
+      * shallow depth of field
+      * (These all sound like they could affect immersion or sense of presence negatively though)
+ Related Work
+   * Perception
+      * Magicians have been exploiting the limits of perception and attention for centuries. 
+      * Research indicates that 3D perception of position and orientation is largely affected by reference objects in the field of view
+         * (lots of things could correspond with this statement)
+            * (redirection being less effective at high fov)
+            * (optical flow, scene density etc)
+      * Hence, the fewer reference elements there are in the scene, the harder it will be to perceive changes in the background. 
+      * motion perception is exploited through the visibility control techniques
+      * difference between change blindness and inattentional blindness
+         * the former is the failure to notice an obvious change in a scene from befpre
+         * the latter is the failure to notice something that doesn't fit in plain view.
+ Design methodology
+   * Embedded Context-Sensitive Distractors
+      * coherent with the narrative and related user interactions with the VE
+      * attractors like a bird in a park or an enemy in a battle scene do not feel out of place. 
+      * This of course requires designing the experience with the distractors/attactors in mind
+   * Visibility control techniques
+      * virtual scene is rotated when the user is performing a task
+      * reduced field of view
+         * this requires users to look through devices or small openings that are appropriate for the tasks they need to perform
+            * (oh, this definitely sound a lot more well integrated than the initial impression)
+         * looking through a binocular or telescope limits the FOV and can make it hard to notice the scene rotation
+      * Limited viewing distance
+         * using fog, dust, blowing leaves, heavy snow or rain to reduce the distance one can see. 
+         * this removes visual reference points from the scene which can make scene rotation imperceptible. 
+         * Mixed with nearby attractors this can provide another opportunity to rotate the VE.
+      * Tilted viewing angle
+         * looking towards the clear sky or any background that has a limited number of objects which can act as reference points. Using an attractor to make the user look up or down fits this purpose. 
+         * reading a book or inspecting an insect or any other object close to a plain background
+      * Shallow Depth of Field
+         * a foreground object can be a distractor while the blurred background allows for VE rotation
+      * In both limited viewing distance and shallow depth of field, background reference points are masked. 
+    * Three example scenarios where the four methods + attractors could work
+       * Treasure Hunt
+          * Users follow a map to the treasure which would require them to stay on a predetermined path
+          * Attractors would be objects that provide clues to the location of treasure, puzzles or tasks. 
+             * (what if the user keeps staring at the map while moving forwards until they leave the tracking space and hit a wall though?)
+       * Job Simulator extension
+       * Pokemon like game
+         * walking along a fixed path through a forest to collect things.
+         * trees or insect swarms would serve to affect visibility. 
+ Implementation
+   * A game where the user has to walk from point A to B then to C
+       * (This does not sound like it would allow free exploration though)
+   * The player is a naturalist that goes around in a small park for collecting data on birds and bugs.  
+   * Reorientations
+      * Whenever the user leaves the safe area, a task relevant attractor is spawned causing the user to stop and interract. 
+      * 3.5m x 3.5m tracking space
+      * VE rotated by 90 degrees when a attractor is active
+      * (generally it feels like this requires a lot of predefined paths though. Free exploration seems to be harder)
+      * Directionally constant need based rotation contrasts directionally variable and continuous rotation
+         * When the user approaches a boundary the desired direction the scene wants to be after reorientation has already been determined based on the user's position, approach angle and future direction. 
+         * Directionally constant rotation: a method to insert desired rotation that does not change the direction once it starts rotating.
+         * When the user turns to the desired direction while interacting with the environment the VE rotates half as fast. If the user turns in the opposite direction, scene rotation is 1.5 times faster. 
+         * Compared to Peck's distractors that always move in one direction, this method introduced asymmetric rotations that allow both the user and the attractors to move in any direction. 
+      * Rotation only happens during interaction with attractors 
+      * Since continuous redirection is not applied it is possible to calculate the minimum number or reorientations that are needed.
+    * Binoculars example
+       * Limited FOV method
+       * For as long as the user looks through them, scene rotation is active and halted whenever the user stops looking through binoculars.
+       * The bird that one can look at disappears when the VE is rotated by 90 degrees
+ Evaluation
+   * Questionnaires
+      * Demographic questions and previous VR experience
+      * SSQ
+      * SUS
+      * Open Ended question on whether they found anything unusual
+   * In order to eliminate the carryover effect between questions about presence, the demographic questions were interspersed with other questions as suggested by[25]
+ Results
+    * Limited viewing distance was most effective
+    * reorientation was generally effective
+ Discussion
+   * No experimenter intervention was required to keep users in the tracked space
+   * two participants (both experienced 3D gamers) noticed the rotation
+   * Inattentional blindness when paired with an appropriate attractor can successfully create a natural walking experience in a small space
+   * participants with experience in games seem to have reported higher sensitivity to reorientation*
+ Strategies for embedding attractors
+   * attractors can be thought of as the moving elements in a scene while static objects or objects that interact with attractors form the essence of visibility control. 
+   * visibility control methods serve to reduce the noticeability of the reorientation while the user is engaged in interaction with a distractor/attractor. 
+   * the design of visibility control approaches should stay separated from the design of attractors for lending more flexibility and variety in the creation of interaction mechanics. 
+   * traditional redirection methods that involve continuous scene rotation can become annoying if the tracking space is very small which is the case for most roomscale setups[19]. 
+   * average users get bored if the same reorientation technique repeats more than 5 times which reduces the sense of presence. 
+   * using different types of model for the same distractor can also help.
+   * the obviousness of world rotation is decreased when using the embedded techniques
+   * eliciting inattentional blindness with functional/interactive attractors and visibility manipulation leads to users overlooking the rotation of the virtual world.
+ Limitations and future work
+   * designing integrated techniques is time costly. 
+   * users may disregard the attractor and exit the tracked area
+      * a warning system can help with it
+   * current design focuses on scenarios with predetermined paths
+Conclusion
+   * embedded context sensitive reorientation can improve the VR experience, resulting in high sense of presence, significantly reduced dizziness and reduced noticeability of scene rotation. 
+   * (generally, I think the general ideas at play here seem to be on point. Adding more types of visibility techniques would probably help though. Allowing for more free exploration would be preferable although it has been mentioned as future work)
   }
 }
 
