@@ -137,7 +137,9 @@ Conclusion
   author={Fuglestad, Bj{\o}rn N{\o}dland},
   year={2018},
   school={NTNU},
-  notes= {Bjørn's master thesis}
+  notes= {Bjørn's master thesis
+   * (Mentions that a different approach to measuring detection thresholds would be preferred)
+  }
 }
 
 @article{norouzi2018assessing,
@@ -536,7 +538,6 @@ notes={
        * Curvature gain was also dependent on walking speed here. Lower speeds = higher gains
        * simulator sickness was not increased by the dynamic controller
        * Avatars were not successful. 
-   
 }
 }
 
@@ -947,6 +948,25 @@ Conclusion
   organization={IEEE}
 }
 
+@inproceedings{razzaque2001redirected,
+  title={Redirected walking},
+  author={Razzaque, Sharif and Kohn, Zachariah and Whitton, Mary C},
+  booktitle={Proceedings of EUROGRAPHICS},
+  volume={9},
+  pages={105--106},
+  year={2001},
+  organization={Citeseer}
+}
+
+@inproceedings{steinicke2008moving,
+  title={Moving towards generally applicable redirected walking},
+  author={Steinicke, Frank and Bruder, Gerd and Ropinski, Timo and Hinrichs, Klaus},
+  booktitle={Proceedings of the Virtual Reality International Conference (VRIC)},
+  pages={15--24},
+  year={2008},
+  organization={IEEE Press}
+}
+
 % Somewhat relevant papers, but not entirely - Google Scholar database
 @article{norouzi2018augmented,
   title={Augmented Rotations in Virtual Reality for Users with a Reduced Range of Head Movement},
@@ -969,14 +989,265 @@ Conclusion
 
 
 
+% APW Papers
+@inproceedings{nielsen2016missing,
+  title={Missing the point: an exploration of how to guide users' attention during cinematic virtual reality},
+  author={Nielsen, Lasse T and M{\o}ller, Matias B and Hartmeyer, Sune D and Ljung, Troels and Nilsson, Niels C and Nordahl, Rolf and Serafin, Stefania},
+  booktitle={Proceedings of the 22nd ACM Conference on Virtual Reality Software and Technology},
+  pages={229--232},
+  year={2016},
+  organization={ACM},
+  notes={
+  Abstract
+     * VR limits filmmakers ability to guide the audience's attention
+     * A taxonomy of guiding the attention of users is presented
+     * a study that compares two such approaches with a control condition devoid of guidance is presented
+        * one approach guides users by controlling their body's orientation
+        * the other implicitly directs their attention by encouraging them to follow a firefly with their gaze
+            * (Very much in line with other distractors)
+            * (The concept of a virtual distractor can in that regard have more use cases than just in redirected walking)
+     * Results revealed interesting, but statistically insignificant data.
+        * Indications that assuming control of the users action may negatively influence presence 
+           * (you dont say :P)
+        * Firefly was preferred
+           * (Maybe a taxonomy of distractors would be worthwhile to make? Or simply extending the proposed one here I guess)
+  Introduction
+     * traditionally, filmmakers have relied on four cinematic techniques for guiding the audience's attention, eliciting curiosity and suspense, and adding expressive qualities
+        * cinematography
+           * capturing a scene with a camera
+        * mise-en-scène
+           * everything presented in front of the camera
+        * sound
+        * editing
+    * each of these pose their own unique challenge within cinematic VR
+    * it is not possible to rely on cinematogrophy as the camera is controlled by the user
+    * This leaves three options that are different, but not mutually exclusive
+       * 1. progression of the story is halted until the user's head or gaze direction is pointing in the right direction
+       * 2. events and objects are dynamically presented within the field of view of the user
+       * 3. the filmmaker uses cues to steer the user's attention towards relevant events and objects (using mise-en-scene and sound)
+  Taxonomy
+    * visual salience (perceptual properties that make visual objects stand out from their surroundings) has been used to direct attention in a number of applications including AR. 
+    * Factors that are believed to influence salience include
+       * luminance contrast
+       * edge or line orientation
+       * color
+       * motion
+       * stereo disparity
+    * the contrast between these features and the environment creates salience
+       * (In addition I would probably say that the purpose of said visual object in relation to the VE also has some effect)
+    * inspired by Suma et al.'s taxonomy
+       * particularly when it comes to subtle and overt redirection techniques
+    
+    ************************ Taxonomy description
+    * differentiation between cues that guide the user's attention by explicitly communicating a given event or object is deserving of attention (explicit cues), and cues that implicitly directs the user's attention towards elements in the VE(implicit cues).
+    * there is also a distinguishment between cues that are causally rooted within the VE(diegetic cues) and cues that are external to this world(nondiegetic cues)
+       * diegetic cues are perceptible to other characters inhibiting the VE
+          * (i.e. a dragon attacks a village and the villager npcs + the player notice it)
+       * nondiegetic cues are only viewable by the user
+          * (i.e. arrow that points which direction you should rotate in)
+    * finally, there is a destinction between cues based on whether or not they limit the user's ability to interact within the VE by preventing them from performing certain actions or by assuming control of their actions in the VE
+       * This is closer to traditional filmmaking and cinematogrophy.
+       * (Not really something we see a lot of in RDW)
+    * (I think this taxonomy can be applied to current research within RDW distractors and be used to map out what has been done)
+    *************************** Taxonomy permutations and examples
+    * explicit diegetic cues
+       * limiting interaction
+          * i.e. as a passenger on a guided tour you are forced to observer specific locations and events
+       * allowing interaction
+          * virtual characters that through dialogue or gestures point to relevant elements in the VE, or diegetic signs that serve the same purpose 
+             * (like having a volcano explode!). 
+       * a HUD *may* qualify as being diegetic in examples like being inside a cockpit and visible to the pilot as it is part of the virtual world
+    * explicit nondiegetic cues
+       * a HUD might however also qualify as an explicit nondiegetic cue that does not limit interaction
+          * (like my earlier given HUD arrow example)
+       * limited interaction example
+          * a system that prevents the user from reaching places devoid of narrative content
+          * similar to the Vive's chaperone safety system
+    * implicit diegetic cues
+       * limits interaction
+          * environmental constraints like virtual objects or characters that force the user to change path or gaze direction
+              * (the walking agents in one of the distractor papers from RPP)
+       * allows interaction
+          * Any salient object in the environment that catches the user's attention without explicitly informing the user that they should change focus would qualify as an implicit diegetic cue that does not restrain interaction. 
+              * (the butterfly used by Peck et al. in their 2009 redirection study)
+    * implicit nondiegetic cues
+       * limits interaction
+          * systems that assume control of the viewpoint in a manner that is not feasible in the VE
+             * translating a stationary user or rotating a user who is sitting in a non-swivelling chair
+             * (However, a minecart or a theme park ride would be a diegetic counterpart to this. Would it not?)
+    ***********************************
+    
+  User Study
+     * 3 conditions compared
+     * Forced rotation 
+        * virtual body is always pointing in the direction of where things happen
+        * the actual head can still move and look around though
+        * implicit nondiegetic guidance that limits the user's freedom to interact
+     * Firefly
+        * user can freely look around
+        * small firefly offers clues as to where the user should focus
+        * implicit diegetic guidance that does not limit interaction
+     * Control condition
+        * no guidance
+     * 45 participants
+     * between subjects design
+     * VR experience made in Unity
+     * Oculus DK2 used
+     * participants were seated in a non-swivelling chair
+        * only head rotation was possible
+     * SUS questionnaire used to assess subjective sense of presence
+
+  Results/Discussion
+    * no statistical significant difference in subjective sense of presence
+       * borderline significant though
+    * use of questionnaires to measure presence has been brought into question
+    * future studies would benefit from including behavioural and physiological measures of presence
+    * future studies would benefit from more complex scenes as well as elaborate measures of recollection and visual attention(eye tracking metrics)
+    
+  Conclusion
+    * it might be fruitful for future taxonomies to be informed by the theories of audiovisual salience
+    * firefly was seen as more helpful
+  }
+}
 
 
+@inproceedings{peck2011evaluation,
+  title={An evaluation of navigational ability comparing Redirected Free Exploration with Distractors to Walking-in-Place and joystick locomotion interfaces},
+  author={Peck, Tabitha C and Fuchs, Henry and Whitton, Mary C},
+  booktitle={Virtual Reality Conference (VR), 2011 IEEE},
+  pages={55--62},
+  year={2011},
+  organization={IEEE},
+  notes={
+  * 
+  }
+}
 
+@inproceedings{peck2010improved,
+  title={Improved redirection with distractors: A large-scale-real-walking locomotion interface and its effect on navigation in virtual environments},
+  author={Peck, Tabitha C and Fuchs, Henry and Whitton, Mary C},
+  booktitle={Virtual Reality Conference (VR), 2010 IEEE},
+  pages={35--38},
+  year={2010},
+  organization={IEEE},
+  notes= {
+  * no predefined waypoints required for IRD
+  * IRD is based on steer to center
+     * Predicted user path is based on the average user heading direction over the past second
+  * Rotation rate is doubled while a distractor is active since previous results suggests that users are less aware of redirection when focusing on visual distractors (cites 2009 paper from Peck)
+     * (I feel like Steinicke or someone else also mentioned this so there probably is some correllations here when citing this specific statement)
+  * old school vr hmd tech used
+  * A ghost distractor that the use has been instructed to follow
+  }
+}
 
+@article{peck2009evaluation,
+  title={Evaluation of Reorientation Techniques and Distrators for Walking in Large Virtual Environments},
+  author={Peck, Tabitha C and Fuchs, Henry and Whitton, Mary C},
+  journal={IEEE Transactions on Visualization and Computer Graphics},
+  volume={15},
+  number={3},
+  pages={383},
+  year={2009},
+  publisher={NIH Public Access},
+  notes={
+  * 
+  }
+}
 
+@inproceedings{suma2011leveraging,
+  title={Leveraging change blindness for redirection in virtual environments},
+  author={Suma, Evan A and Clark, Seth and Krum, David and Finkelstein, Samantha and Bolas, Mark and Warte, Zachary},
+  booktitle={Virtual Reality Conference (VR), 2011 IEEE},
+  pages={159--166},
+  year={2011},
+  organization={IEEE},
+  notes={
+  Abstract
+     * change blindness redirection presented
+     * no usage of gains, but redirects by modifying the environment
+     * 1/77 participants noticed the changes in the scene
+     * (I feel like it has been mentioned somewhere else, but this kind of limits your design of the VE as you have to design it in a way that supports change blindness and the ideal case is mostly indoor environments. I get the feeling like this is another niche redirection case like bending gains. Distractors need to be context relevant, but they can at least be designed as components of game mechanics or similarly and thus work in a larger variety of circumstances)
+  Introduction
+     * Real walking has been shown to provide advantages over other locomotion techniques including
+        * a greater sense of presence
+        * more efficient travel
+        * superior performance on search tasks
+        * benefits for memory and cognition
+     * (Useful citeable stuff for RDW introductions)
+     * Change blindness redirection does impose a few constraints regarding scene geometry and user motion. 
+  Previous Work
+     * 
+  Change Blindness Redirection
+     * processing strategies to explain change blindness have been suggested
+        * 1. people will rely on their first impressions of an environment
+        * 2. the initial mental representation will be overwritten
+        * 3. conflicting features will be combined
+     * experiments have shown at least that if the visual field is occluded during scene changes, it is very hard to notice that a change has happened when vision is restored.
+        * (poster experiment is relevant here I guess)
+     * the redirection makes use of doorway switches to make the user walk around in a building while making good use of the physical tracking space
+     * Environment is designed to be explored by visiting each room in order. Skipping a room means that the redirection technique fails
+        * (Not particularly good for freely moving around in a bigger space)
+     * redirected walking also assumes that the user follows a particular path
+        * (that depends entirely on the simplicity of your RDW implementation. There is research into free exploration with RDW. This argument does not hold up in the current day and age at least.)
+  Experiment 1: Initial study
+     * the goal of the experiment was to determine
+        * how well users could notive scene changes
+        * whether they were able to form a coherent mental map of the dynamic VE
+        * whether it is necessary to distract users to make them less sensitive to scene changes
+           * (Well this is interesting!)
+        * to probe the issue, the inclusion of a working memory task was varied as a independent variable
+     * 37 participants
+     * research credit was offered for participating
+        * (meh)
+     * Participants had the goal of walking around the virtual office and turn on all the computer screens. Furthermore they were randomly assigned to one of the following between-subjects conditions
+        * distraction
+           * each pc screen displayed a picture of a unique object, presented in a random order. Participants were told that they should remember these and would be tested afterwards
+           * the cognitive load imposed by the working memory task would distract participants and potentially cause scene changes to be less noticeable
+        * exploration
+           * no memory test was given
+    * experience with 3D games might also influence effectiveness of redirection so this was investigates as a between subjects variable as well
+    * old school VR equipment used
+    * Methods
+       * effectiveness of change blindness was assessed through several real questions embedded in a list of decoy phenomena similar to an approach taken by Peck et al. (during their evaluation of reorientation techniques)
+          * they were asked "did you notice anything unnatural or odd about your virtual experience? Please rate the following statements. Please note that these phenomena may or may not have happened".
+          * (Useful to think of)
+       * debriefing at the end
+  Experiment 2: follow-up study
+     * higher FOV was tested with. 
+     * wider FOV results in more accurate distance perception
+        * (Does this interfere with Steinicke's thresholds for translation gain?)
+     * 40 participants
+     * more or less the same as experiment 1, but there was a wide FOV and narrow FOV condition
+     * Discussion
+        * the single office map suggests that most participants stuck with their first impressions of the environment which is one of the suggested hypotheses to explain change blindness
+   }
+}
 
-
-
+@inproceedings{grechkin2015towards,
+  title={Towards context-sensitive reorientation for real walking in virtual reality},
+  author={Grechkin, Timofey and Azmandian, Mahdi and Bolas, Mark and Suma, Evan},
+  booktitle={Virtual Reality (VR), 2015 IEEE},
+  pages={185--186},
+  year={2015},
+  organization={IEEE},
+  notes={
+  Motivation:
+     * introduces rotate-and-walk technique which is designed to an efficient alternative to existing alternatives
+  Reorientation techniques
+     * redirection with distractors relies exclusively on rotation gains
+        * (This statement is rather outdated and not true)
+     * rotate-and-walk combines rotation gains with other redirection methods
+        * (Peck already did this though, didn't she? She had a modified Steer to Center presented in improved redirected walking with distractors iirc)
+     * Makes use of temporary objectives to guide the user towards it instead of their actual goal.
+     * relies on heuristics
+  Planning for reorientation
+     * tips for designing reorientation procedures
+        * if you are about to move into a fast paced phase, it might be best to preemptively reorient the user
+        * avoid using the same orientation procedure repeatedly
+            * A large repertoire of reorientation techniques is preferred
+  }
+}
 
 
 

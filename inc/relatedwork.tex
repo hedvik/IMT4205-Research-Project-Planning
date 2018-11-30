@@ -1,119 +1,209 @@
-\chapter{Related work (3-10 pages)}
+\chapter{Related work}
+In order to see which extent the research questions have been answered by existing work, a literature review has been conducted in this Chapter. The sampling procedure of the literature for this review can be found in Chapter~\ref{chap:methods}. 
 
-\section{Redirected Walking, Detection Thresholds and Comfort}
-* Slight background first
+\section{Redirected Walking, Detection Thresholds, Cybersickness and Presence}
+Before reviewing the literature on distractors, it would be beneficial to first review the general topic of redirected walking. This Section provides some background as well as relevant existing work within this area.
 
-* Generally, most studies have done what they can to sustain the illusion of unconstrained walking in VR
-* As such Steinicke et al. formalised the concept of detection thresholds which are thresholds where the user notices/detects that they are being redirected
-* There are quite a few factors and variables that can affect the effectiveness of RDW and detection thresholds
-   * Discuss 
-* How much tracking space is feasible?
-   * 22m ideally according to Steinicke et al.
-   * The more gains you can apply the better
-   * Inattentional blindness
-   * Distractors
-* Effects on comfort and cybersickness in relation to gain strength and detection
-   * One of the benefits with natural walking is that it minimizes cybersickness compared to other locomotion techniques
-   * Ideally you would want to limit the extra amount of cybersickness that comes as a result of redirection, otherwise there isn't that much point in using it other than improving immersion 
-   * Dynamic FoV can make it harder to detect redirection, but it might also result in more sickness
-* Immersion and sense of presence
+\subsection{Background}
+The concept of redirected walking was originally presented by Razzaque et al.~\cite{razzaque2001redirected} as an alternative to real walking in virtual environments. The primary motivator behind its introduction was to optimise the usage of physical tracking space. This, in turn, allows for the development of virtual environments that are larger than the physical tracking space at what was considered a minimal increase in simulator sickness. 
 
-* TOTHINK:
-    * How does the literature provide answers to my research questions?
-    * How can I apply what the literature has found to my project?
+Since its introduction, redirected walking has seen a fair amount of development as an area of research. One particularly notable study was Steinicke et al.'s research which formalised the concept of detection thresholds and introduced a taxonomy of redirected walking techniques~\cite{5072212}. As part of the taxonomy, they introduced the concept of three types of redirection gains:
+\begin{itemize}
+    \item Translation Gain
+    \item Rotational Gain
+    \item Curvature Gain
+\end{itemize}
 
-\section{Taxonomy of Distractors in Redirected Walking}
-* What is a distractor?
-   * A somewhat encompassing term
-   * Some history: who introduced it to RDW? Peck et al. 
-   * At the simplest level, a distractor when employed with redirected walking aims at occupying the user's attention in a way that makes it harder to notice that higher gains are being applied. 
-      * Research points towards this phenomenon: citations
-   * There is no direct taxonomy that defines what types of distractors exist
-   * As such, a grounded theory approach has been used to generate a taxonomy of distractors which will be used as a framework for the following section in this literature review. 
-   
-* What are the dimensions we are dealing with?
-   * General Traits
-       * Taking a look at attentional cues from Cinematic VR: Explicit vs. implicit
-           * If the "distractor" is very important in the VE, is it explicit?
-              * Should an angry dragon be considered explicit?
-              * Watching birds is explicit if that is your goal
-              * Does it fill an explicit goal?
-                 * If this goal is provided to the user, I would say that the distractor can be considered as explicit
-           * Is a activity in a VE considered as a explicit distractor?
-               * Might need some thinking!
-           * An explicit one could be better at making the user turn around
-           * Are implicit ones less effective?
-               * Unless they are particularly salient, probably.
-               * It might not be ideal to use implicit distractors
-               * It can be dangerous to rely on the fact that the user will not ignore them
-               * Large amounts of implicit distractors might create too much optical flow which may or may not make redirection more noticeable. 
-           * Is the distractor something you can ignore, or is it something you really should keep attention to?
-               * Ignoring a implicit distractor is probably easier than a explicit one
-       * Context sensitivity
-          * A generic distractor would be closer to standard reorientation techniques.
-             * Not ideal in terms of presence or immersion, can become too repetitive
-             * Looking at the literature, these have also generally required additional instruction before conducting the experiment
-             * A generic distractor is not necessarily an important part of the experience
-          * A context sensitive distractor is directly integrated into the virtual experience. 
-             * They are a integral part of the experience.
-             * Generally a good fit with games
-       * Timing
-            * When does the distractor activate?
-            * Safe circles from previous research
-            * Generally this happens earlier compared to a regular reorientation technique
-   
-   * Distractor Types
-      * Is the distractor an object or a virtual existence in the experience?
-         * Diegetic vs. Non-diegetic
-            * Sense of presence and immersion
-         * Is it static or is it moving?
-             * How does it move? 
-                * Towards or away from the user?
-                * Moving around in the user's vision?
-                * Circling the user?
-         * Where does it appear in the user's vision?
-            * In the peripheral vision?
-            * In plain sight?
-            * Outside of your sight?
-               * Audio cues
-               * Visual effects that signify that something is behind you or close to you
-         * Is this something you want to avoid or is it something you want to engage with?
-            * Deterrent, attractor
-            * Deterrents can be used as a "chaperone" system similar to what you see with the HTC Vive
-         * Salience
-            * How quickly does it catch the user's attention?
-            * How long can it keep the user's attention?
-      * Is the distractor more abstract?
-         * Is it an activity?
-            * This will "attract" the user's attention
-         * Does this activity consist of other "distractors"?
-      
-* In cinematic VR, there generally is a focus on implicit ways to guide attention for the sake of immersion in the experience.
-* In games, the usage of explicit cues/distractors can make a bit more sense due to the more interactive nature of the environment. 
-* TOTHINK: What elements of these define their own categories? Which ones are the most important?
+Translation gain is defined as a gain of translational movement in the virtual world compared to the real world. Rotational gain is defined as a gain of head rotation in the virtual world compared to the real world. These rotational gains are usually applied on the vertical axis. Finally, curvature gains are defined as a camera manipulation that constantly injects small changes in vertical angles. This allows the user to be redirected so they physically walk on a curve when it appears that they walk in a straight line virtually. Detection thresholds allow for the estimation of gains that can be applied without the user noticing them. As such, it has become a core of many other studies in the field. The taxonomy itself has since been extended by Suma et al.~\cite{suma2012taxonomy} to provide a more comprehensive look into additional redirection techniques. 
+
+Outside of the three established redirection gains, an additional fourth type has recently been proposed by Langbehn et al.~\cite{7833190}. Their study presents the concept of bending gains which are similar to curvature gains but only applied whenever the user walks on a curve in the virtual world. 
+
+In terms of relevance to research questions, the estimation of detection thresholds is directly relevant to $r_1$ as it provides a means to find undetectable gains. Despite this, there is a problem with the method of estimation that consists of some ethical ramifications. These are further discussed in Chapter~\ref{chap:ethics}.
+
+\subsection{Variables That can Affect Redirected Walking and Detection Thresholds}
+One thing to note about detection thresholds and the efficiency of redirected walking is that there are a variety of variables that can impact these. All the potential variables that were found throughout the sample of literature can be found in Table~\ref{table:DTVariables}. Since each variable is only briefly presented, there is a fair amount of new and abbreviated terminology in use. A short description of these can be found in Appendix~\ref{app:terminology}.
+
+\begin{table}[h!]
+\centering
+\begin{tabularx}{\textwidth}{|m{2cm}|m{1.7cm}|m{10.1cm}|} 
+\hline
+Variable & Research Discussing Variable & Research Results|Comments in Parentheses\\
+\hline
+Size + Shape of Physical Tracking Space & 
+\cite{azmandian2015physical} & 
+There is no single ''optimal'' size.\newline Square shaped tracking spaces are the best choice for S2C and S2O algorithms.\newline S2C performs best in tracking spaces under 15m x 15m.\\
+\hline
+Optical Flow / Visual Density in VE & ~\cite{8446225, steinicke2008moving, 8446216} & Virtual environment size has no significant effect on detection thresholds.\newline It appears that low visual density/optical flow could make it harder to notice redirection.\newline Translation gain appears to be harder to detect in a scene with less rich visuals.\\
+\hline
+Hardware: HMD Field of View &
+~\cite{fuglestad2018redirected}\newline Potentially relevant:\newline\cite{norouzi2018assessing} &
+Detection thresholds for rotation and translation gain application are significantly lower with modern day hardware.\newline This could be caused by a increase in HMD field of view.\newline(This might correlate with increased optical flow).\\
+\hline
+Speed of Walking & \cite{5759454} & Likelihood of detecting curvature gain is significantly lower when walking slower.\newline Dynamic curvature gain allows for larger travel distances between resets compared to static gains.\\
+\hline
+Engagement / Distraction & \cite{5072212, schmitz2018you, sra2018vmotion}\newline Potentially relevant:\newline\cite{norouzi2018assessing, 5759454} & Whenever a user is engaged with a primary task or distracted by something, they appear to be less likely to notice that redirection is applied.\\
+\hline
+\end{tabularx}
+\caption{Variables that can affect detection thresholds in redirected walking}
+\label{table:DTVariables}
+\end{table}
+
+The variables that are found in Table~\ref{table:DTVariables} are relevant to this study as they can be used to inform the design of the virtual test environment, the use of redirection algorithms depending on available physical space and how to potentially maximise undetectable gains. Furthermore, the study by Azmandian et al.~\cite{azmandian2015physical} provides a means to measure the quality of redirection which is relevant for $r_2$.
+
+\subsection{Comfort and Cybersickness}
+While redirected walking aims at optimising the use of available tracking space and still leverage the benefits of real walking, it can result in some problems. High redirection gains have a tendency to result in cybersickness for the user. In doing so, one of the primary benefits from real walking is lost. Ideally, the increase in cybersickness from redirected walking should be minimised to provide the best user experience while still efficiently using the tracked space. In relation to detection thresholds, Fuglestad's research has shown that there is an additional threshold between noticeable redirection and increases in cybersickness~\cite{fuglestad2018redirected}. This means that it should be feasible to use estimated detection threshold values for redirection without the risk of cybersickness increases, even if the user notices it at times.
+
+Outside of high redirection gains, there are also other factors that could increase cybersickness or limit user comfort. Dynamic field of view has for example been shown to potentially increase cybersickness~\cite{norouzi2018assessing}. Women might also be slightly more susceptible to cybersickness than men~\cite{hildebrandt2018get}.
+
+Due to the potential negative implications of standard redirected walking techniques, some researchers have developed new means of redirection. Suma et al. have made use of change blindness as a way to redirect without any type of gains~\cite{suma2011leveraging}. Despite this, their method only works for indoor environments and requires additional engineering for each individual room amongst these. Sra et al. have made use of scene rotation whenever the user is engaged with a task to leverage inattentional blindness~\cite{sra2018vmotion}, but their approach only works with predefined paths. 
+
+From the point of view of a virtual environment designer, it would not be ideal to impose too many restrictions on how the environment is designed. At the same time, it is important to consider that cybersickness should be minimised as much as possible. Not doing so, can result in some ethical ramifications which are discussed in Chapter~\ref{chap:ethics}. For this study in particular, it is helpful to know that cybersickness exists at a higher threshold than detection as this means that estimated gains should be possible to use safely. This knowledge can also be used to inform the method for estimating detection thresholds. 
+
+\subsection{Sense of Presence}
+Sense of presence is a central part of virtual reality experiences. By properly immersing the user into a virtual world, it is possible to provide an engaging user experience. Sense of presence can be negatively affected by a variety of techniques in redirected walking, which can compromise the overall experience of the user. 
+
+The first of these are high redirection gains. Similar to Fuglestad's research that shows a difference between noticeability and cybersickness thresholds, Schmitz et al. presented that presence/immersion breaks at a different threshold from detection~\cite{schmitz2018you}. This means that certain gains of redirection can be noticed without resulting in cybersickness increases or breaks of presence.
+Outside of redirection gains, another technique that can affect the sense of presence is reorientation/resetting. Resetting techniques are fail-safes that are used whenever the user starts to exit the physical tracked space due to insufficient redirection. An example of this would be to instruct the user to stop and rotate 360 degrees in the virtual world while they only rotate 180 degrees in reality due to applied rotational gains~\cite{suma2012taxonomy}. By doing so, the user is reoriented so that they no longer are in danger of leaving the tracked space. The problem with these types of techniques is that they are very intrusive and easily break any sense of presence. 
+
+Azmandian et al. mention that the average user should expect to have a physical tracking space that is 10m x 10m or lower and this results in a lot of resets as unnoticeable redirection is not sufficient. Therefore they suggest that the focus should be on improving existing reset/reorientation mechanisms and better integrate them into the experience to limit breaks in presence~\cite{azmandian2015physical}. Improved subjective sense of presence and improved redirection are among the main areas that distractors aim to improve~\cite{peck2009evaluation, peck2011evaluation} which are the focus of this study.
+
+\section{Distractors in Redirected Walking}
+Distractors in redirected walking were originally presented by Peck et al. in 2009~\cite{peck2009evaluation}. In their study, the participants were instructed to watch a moving sphere and use this ''distraction'' as a means to increase redirection. Since then, various researchers have further improved distractors, although the term itself has acquired a few different semantic meanings. At the simplest level, a distractor when employed with redirected walking, aims to occupy the user's attention so that it is harder to notice redirection. As such, it is also possible to increase redirection during distraction~\cite{5072212}. This could potentially be a result of inattentional blindness which Sra et al. mention in their study on distractors~\cite{sra2018vmotion}. Distractors are triggered in a similar way to previous ROTs, meaning that they activate whenever the user moves towards the edge of the physical tracking space. Compared to previous ROTs, distractors activate at a lower distance from the centre which means that existing ROTs can still be used as a fail-safe if the distractor itself fails to redirect the user~\cite{suma2012taxonomy}. Results from previous research also suggests that distractors result in higher levels of subjective presence compared to previous ROTs~\cite{peck2011evaluation}. 
+
+From the acquired sample of literature, it does not seem like there is any formal taxonomy that defines the elements of distractors or their types. The closest to this would be Suma et al.'s taxonomy on redirection techniques~\cite{suma2012taxonomy}, but this taxonomy is too general to specify the details for distractors. As such, a grounded theory approach has been used to generate a taxonomy that classifies the most apparent elements that distractors consist of. This taxonomy will also be used as a framework to review the acquired sample of literature on distractors.
+
+\subsection{Taxonomy of Distractors in Redirected Walking}
+In cinematic VR, a similar topic to distractors is guided attention. While the goals behind a distractor and guided attention are somewhat different, there is some overlap that could be useful to consider. Taking inspiration from the taxonomy on redirected walking by Suma et al.~\cite{suma2012taxonomy}, Nielsen et al. have created a taxonomy of cues for guiding user attention in VR~\cite{nielsen2016missing}. Their taxonomy consists of three dimensions: explicit/implicit cues, diegetic/non-diegetic cues and whether they limit the ability to interact with the VE. Limiting interaction in the VE is not quite as relevant for redirected walking with distractors as physical walking is required, but the other two dimensions have been adapted into this taxonomy. The following sections describe general elements that can apply to any distractors, a distinction between two types of distractors and some elements that one of these can consist of. 
+
+\subsubsection{Explicitness}
+One of the relevant elements from Nielsen et al.'s taxonomy is explicitness. This is split into explicit and implicit cues. An explicit cue consists of communicating that an event or object is deserving of attention while an implicit cue is meant to guide attention by simply being salient or interesting. In terms of distractors, these can also be explicit or implicit. An example of an explicit distractor would be a moving enemy in a VR game or something that the user has been told to pay attention to whenever it appears. As long as the user knows that they should pay attention to something, regardless of its purpose in the VE we can consider it as an explicit distractor. 
+
+Implicit distractors on the other hand, would be distractors that can catch the user's attention in an almost instinctive manner. These could be salient elements that pop up in the peripheral vision of the user, potentially making them turn their head to see what it is. Another example would be a firefly that flies around and could catch the user's attention simply due to its salience in a darker environment. Compared to an explicit distractor like an enemy that the user knows they have to defeat, implicit distractors do not explicitly communicate how the user should react or interact with them. 
+
+Currently, the usage of distractors is mostly of the explicit variety. A reason for this could be that the risk of ignoring an implicit distractor might be high. Unless the implicit distractor intrudes in a way that requires action from the user, it might not be seen as anything other than a detail in the scenery. The risk of ignoring a distractor can be problematic as there might not be enough redirection to avoid moving to the physical tracking boundaries. An effective implicit distractor might also be more challenging to design. It could be beneficial to have some background in psychology or neuroscience to understand what a natural user response would be to various implicit distractor scenarios.  
+
+\subsubsection{Context Sensitivity}
+An important aspect of distractors in the state of the art literature is context sensitivity~\cite{chen2017towards, chen2017supporting, sra2018vmotion}. Early distractor implementations were fairly generic and worked similarly to standard ROTs, albeit with some changes. An example of this would be the hummingbird distractor from a study by Peck et al.~\cite{peck2011evaluation}. This distractor appears whenever the user approaches the physical boundaries and flies back and forth in front of the user. The user has in this case been instructed to keep their attention on the hummingbird which then is exploited for redirection. The downside of these generic types of distractors is that they serve no other purpose in the virtual experience other than to exploit the user for redirection. This might not be ideal in terms of sense of presence and can be seen as too repetitive if used too often in a short space of time. 
+
+Instead, the focus with state of the art distractors has been to integrate them into the virtual experience so they serve additional purposes. VR games in particular are a good fit for integrating distractors as they can be included as game mechanics that are a central part of the experience. By doing so, there is less of a need for special instruction outside of understanding the premise of the game. There is also a belief by researchers that doing so will increase the subjective sense of presence~\cite{chen2017supporting, sra2018vmotion}. Improving the subjective sense of presence can be important considerations in the design of distractors as they could improve the user experience. 
+
+Based on what has been seen in the literature, distractors could be categorised within four types of context sensitivity: Insensitive, Visually Integrated, Mechanically Integrated and Fully Integrated(Both visually and mechanically).
+
+\subsubsection{Distractor Types}
+The term ''distractor'' has primarily been used to describe objects in the VE that behave in a way that allows for redirection to be applied during distraction. A study by Sra et al.~\cite{sra2018vmotion} made use of distractor activities or simply ''attractors'' as they called it, which carries a slightly different semantic meaning. Due to this, it could be useful to differentiate between these two by splitting them into concrete and abstract categories.
+
+\paragraph{Concrete Distractors}
+If a distractor is an object or virtual existence in the VE, we can consider this as a concrete distractor. Concrete distractors consist of a variety of design elements which are further specified in the section following the description of abstract distractors. 
+
+\paragraph{Abstract Distractors}
+An activity on the other hand, can be considered as an abstract distractor. An activity can keep the user's attention by itself, but it can also consist of concrete distractors which require further attention of the user. If an abstract distractor is defined as an activity, then it is arguably explicit by nature as the user generally is aware of how they have to engage with it. An example of an abstract distractor would be to play a game, as various game elements and mechanics can keep the attention of the user. It does not matter what type of game the user plays as simply being engaged with it can be considered as a distraction, although its strength can of course vary. 
+
+Abstract distractors can also be context sensitive or insensitive. An example of a context insensitive, abstract distractor would be to ask the user to perform a task that is completely unrelated to what they are doing in the VE. An example of a context-sensitive, abstract distractor could be the activity of stargazing in a night-time scene. The activity of looking up into the sky could in this case allow for scene rotation while the user is looking upwards.
+
+\subsubsection{Elements of Concrete Distractors}
+Concrete distractors can consist of a variety of elements that might result in specific user behaviour or to improve the user experience. The following paragraphs discuss the most apparent elements that were found by reading through the acquired sample of literature on distractors. This part of the taxonomy should be very easily extendable so that additional elements can be added in the future. 
+
+\paragraph{Diegetic/Non-diegetic Existence}
+The second element from Nielsen et al.'s framework regarding diegetic/non-diegetic cues is mostly relevant to concrete distractors. They define a diegetic cue as a cue that is a part of the world in the VE. By being part of the world, these cues are not only visible to one user, but also to any other users or NPCs. A non-diegetic cue on the other hand, is only visible to one user. An example of this would be a HUD or GUI that only one user sees. Diegetic cues could potentially improve the subjective sense of presence as Nielsen et al. achieved borderline significant results in their study~\cite{nielsen2016missing}. This could in turn also be relevant for concrete distractors. 
+
+At the same time, in the context of games, it is not uncommon to have certain UI or elements that always are visible on the screen. If the game does not aim for realism, suspension of disbelief from the player could still result in a high subjective sense of presence. Due to this, one should not discredit the usage of distractors that are non-diegetic.
+
+\paragraph{Movement}
+Another element that concrete distractors consist of is movement or the lack of it. In terms of redirection, a concrete distractor can move around in a way makes the user turn their head. This can be used to apply rotational gains. An example of this would be a concrete distractor that orbits around the user and is important enough that they want to keep it in their vision at all times. If a concrete distractor moves towards the user, it might result in the user attempting to avoid it which can be used to move them away from physical walls or to apply redirection. A concrete distractor can also be useful for head-turning when static. An example would be to place a treasure chest at an angle from the user. In order to get the treasure, the user has to turn their head and move towards it which can be combined with rotation gains.
+
+\paragraph{First Appearance in Vision}
+How the concrete distractor first appears in the user's vision is also something to consider. It could appear in plain sight, in the peripheral vision or outside of the user's vision. If a concrete distractor appears in the user's peripheral vision, it might catch their attention and make them turn their head to see what it is. If it appears outside of the user's vision, an audio cue or visual effects could be used to direct their attention towards where it is. If it appears in plain sight the distractor might need to move around in order to apply rotational gains or to keep the user occupied so they do not notice a scene rotation. An example of this would be a merchant that allows the user to view their wares in a book or pamphlet. While the user is reading, the scene can rotate for the sake of redirection. 
+         
+\paragraph{Deterrents and Attractors}
+Peck et al. introduced the concept of deterrents as a supplement to distractors~\cite{peck2011evaluation}. In their study, a deterrent was defined as something that deters the user from moving towards it. An example of a deterrent would be walls of fire that a fire-breathing dragon creates in Chen and Fuch's study~\cite{chen2017supporting}. In their study, these deterrents were used as a means to deter the user away from physical walls through strategic placement. Given that deterrents are capable of catching the user's attention they could be seen as a type of concrete distractors. 
+
+The opposite of a deterrent would be an attractor which the user wants to engage with. This definition is similar to Sra et al.'s definition of attractors~\cite{sra2018vmotion}, but instead of a activity, this definition is focused on concrete distractors. One of the previous examples of a treasure chest appearing at an angle that forces redirection could also be considered as an attractor. 
+
+\paragraph{Salience}
+The final element of concrete distractors is salience. Salience is defined as how easily a visual object stands out from its surroundings. In terms of distractors, salience can be important so that the user can quickly identify and place their attention on any concrete distractors that are used. Visual salience is comprehensive enough to be its own topic, although Nielsen et al. have mentioned some central factors that are believed to influence salience~\cite{nielsen2016missing}:
+\begin{itemize}
+    \item Luminance Contrast
+    \item Edge or Line Orientation
+    \item Colour
+    \item Motion
+    \item Stereo Disparity
+\end{itemize}
+One thing to note about these factors is that it is also important to consider how they contrast with the surrounding environment. 
 
 
-\section{Redirected Walking with Distractors}
-* Slight background first
+\section{Usage of Distractors in the Literature}
+The previously generated taxonomy has been used as a framework to map out the usage of distractors in the acquired sample of literature. This can be found in Table~\ref{table:DistractorsInLiterature}.
 
-* TOTHINK:
-    * How does the literature provide answers to my research questions?
-    * How can I apply what the literature has found to my project?
-    * What is the state of the art lacking?
-    * Use framework to see what types of distractors have been used
-       * Discuss how in games, we can probably make use of more nondiegetic distractors without it affecting too much due to suspension of disbelief
-    * Does any of the recent studies with distractors look at cybersickness?
+\begin{sidewaystable}[p!]
+\centering
+\begin{tabularx}{\textwidth}{|m{2cm}|m{1.5cm}|m{2cm}|m{1.9cm}|m{2cm}|m{7.55cm}|} 
+\hline
+Distractor & Used in Study & Explicitness & Context Sensititivity & Distractor Type & Additional Relevant Elements\\
+\hline
+Floating Sphere & \cite{peck2009evaluation} & Explicit & Insensitive & Concrete & Non-diegetic, Has movement, Appears in front of user\\
+\hline
+Butterfly & \cite{peck2009evaluation, norouzi2018assessing} & Explicit & Insensitive: \cite{peck2009evaluation},\newline Visually Integrated: \cite{norouzi2018assessing} & Concrete & Diegetic, Has Movement\\
+\hline
+Ghost & \cite{peck2010improved} & Explicit & Visually\newline Integrated & Concrete & Diegetic, Has Movement, Appears in front of user\\
+\hline
+Hummingbird & \cite{peck2011evaluation, suma2012taxonomy} & Explicit & Insensitive & Concrete & Diegetic, Has Movement, Appears in front of user\\
+\hline
+Horizontal Bars & \cite{peck2011evaluation} & Implicit & Fully\newline Integrated & Concrete & Diegetic, Static, Fades into view as user nears physical walls, Used as a deterrent\\
+\hline
+Temporary Objectives & \cite{grechkin2015towards} & Explicit & Undefined & Abstract & None\\
+\hline
+Moving NPCs & \cite{5759454} & Implicit & Fully\newline Integrated & Concrete & Diegetic, Has movement, Moves into view from the side or walks in front of the user, Used as a deterrent\\
+\hline
+Flying Dragon & \cite{chen2017towards, chen2017supporting} & Explicit & Fully\newline Integrated & Concrete & Diegetic, Has movement, Moves towards user from current position when active, Can be considered as a attractor\\
+\hline
+Flame Walls & \cite{chen2017towards, chen2017supporting} & Implicit & Fully\newline Integrated & Concrete & Diegetic, Static, Spawned by dragon when near physical walls, Used as a deterrent\\
+\hline
+Watching Exotic Birds & \cite{sra2018vmotion} & Explicit & Fully\newline Integrated & Abstract & The activity itself consists of concrete disctractors(birds). These birds move across the sky and have to be viewed through a pair of binoculars.\\
+\hline
+Observing Insects & \cite{sra2018vmotion} & Explicit & Fully\newline Integrated & Abstract & The activity itself consists of concrete disctractors(insects). Among the many insects, the user is asked to keep one of them in focus.\\
+\hline
+Observing Insect in a Piece of Amber & \cite{sra2018vmotion} & Explicit & Fully\newline Integrated & Abstract & The user has to hold a piece of amber towards the sky and rotate so they can find a viewing angle that allows them to see the insect inside.\\
+\hline
+Interacting with NPCs & \cite{sra2018vmotion} & Explicit & Fully\newline Integrated & Abstract & The user has to hold a conversation with a NPC which acts as a concrete distractor\\
+\hline
+\end{tabularx}
+\caption{List of all distractors that were used in the sample of literature, framed within the ''The Taxonomy of Distractors in Redirected Walking''}
+\label{table:DistractorsInLiterature}
+\end{sidewaystable}
+When looking at the current usage of distractors from the sample of literature, a few insights can be gained. Most distractors are explicit and the only instances that could be regarded as implicit were in cases of deterrents. Due to this, there are potentially unexplored areas when it comes to designing implicit distractors. As already mentioned in the description of the taxonomy, these can be rather challenging to design which is why we might not see them being used very often. 
 
+Initial forms of distractors were mostly insensitive to context and could be seen as relatively generic. Over time, distractors have started to become more visually integrated with their respective virtual environments. The current state of the art has focused on fully integrating distractors by combining them with game mechanics and activities. Despite this, the integration could go further and increase in complexity. It would have been interesting to see a game with potentially higher complexity be designed around a variety of distractors. The overall design space of fully integrated distractors is fairly large which allows for additional exploration by researchers.  
 
+The vast majority of distractors in this review were also diegetic. This means that there is room to explore non-diegetic distractors that are integrated into the experience. Non-diegetic distractors could for example be used as aids for the user in games or scenarios where extra contextual information is helpful. 
+
+\section{Overall Answers to Research Questions}
+Since the generated taxonomy has partially operationalised various elements of distractors, it would be prudent to update the terminology of the research questions as well. 
+The updated research questions are as follows: 
+\begin{description}
+   \item[$r_1$: ] How noticeable is redirected walking with fully integrated distractors in a playful virtual environment?
+   \item[$r_2$: ] Given the highest unnoticeable gains, how effective is redirected walking with fully integrated distractors in a playful virtual environment?
+\end{description}
+
+The following two paragraphs summarise how the related work is relevant to the research questions.
+
+\paragraph{$r_1$}
+For the first research question, a variety of variables that can affect detection thresholds in redirected walking have been mentioned. These should be considered when designing the experiment and corresponding virtual experience. By focusing on an engaging experience designed around fully integrated distractors, it might be harder to notice the redirection which in turn could allow for stronger gains. A method for measuring detection thresholds has also been provided by Steinicke et al.~\cite{5072212}, but it might require some adaptions for ethical reasons that are outlined in Chapter~\ref{chap:ethics}. The current state of the art is focused on fully integrated distractors and the literature sample provided no research measuring detection thresholds for these. As such, measuring the detection thresholds for fully integrated distractors should be a reasonable contribution to the field of distractors in redirected walking.
+
+\paragraph{$r_2$}
+Azmanidan et al. have provided a method to measure the effectiveness of redirection by recording the total number of forced reorientations using standard reset techniques~\cite{azmandian2015physical}. Since standard reset techniques can be included as fail-safes for distractors this is relevant to make use of for this study. Furthermore, it also allows for comparison with a control condition that does not make use of any redirection gains as the user will trigger forced reorientation when necessary. 
+\todo{Double check that it is azmandian who made this research method.(ACM was down at the time). Otherwise cite the correct source}
+Breaks in presence and cybersickness are thresholds that generally seem to exist at higher gains than detection. Due to this, it would be reasonable to focus on the highest unnoticeable gains as it should not result in an additional negative impact on the experience of participants. 
+
+\if{false}
 The purpose of this chapter
 is to explain to the reader what knowledge is already
 available from the literature.
 
 The purpose of the related work chapter is to:
 \begin{itemize}
-\item Identify to what extent information identified in the 'Research questions'  section is provided in the literature.
-\item Give an overview of why/how the literature provides the answer to the research questions identified.
-\item Identify areas/ research questions where the literature appears to be weak or non-existent.
+\item Identify to what extent information identified in the 'Research questions'  section is provided in the literature. (yes)
+\item Give an overview of why/how the literature provides the answer to the research questions identified. (yes)
+\item Identify areas/ research questions where the literature appears to be weak or non-existent. (working on it)
 \end{itemize}
 The Related Work Chapter is NOT:
 \begin{itemize}
@@ -132,39 +222,10 @@ you should
 This chapter should include one subsection for each of the research
 questions identified in section \ref{research:questions}.  
 
-
-
-\section{Handling Potential problems}
-When searching for literature, you usually get too many hits or none at all...
-
-\paragraph{Question 1} I don't find any relevant literature.
-
-\paragraph{Answer 1.A}  Make a list of words, phrases, applications, abbreviations,
-organizations, terminology etc. relevant for your area of interest.
-Ask a librarian to sit with you for 20 minutes to formulate relevant
-queries to available databases.  Record your findings.
-
-\paragraph{Answer 1.B}  Go to the ACM (www.acm.org) or IEEE (www.ieee.org) web pages.
-Identify the SIGs (Special Interest Groups) of these organizations.
-Select the SIGs which looks the most interesting.
-Most SIGs publish one or more journals and/or organize workshops or conferences.
-Get hold of a few journals or proceedings and see if they're any interesting.
-
-
-\paragraph{Question 2}  I've found a lot of papers.
-They all look interesting, but I don't have time to read them all.
-
-\paragraph{Answer 2.A}  Narrow your search.  Be more specific in your search.  Read the abstracts of the relevant articles before you read the full papers.
-
-\paragraph{Answer 2B}  Find a citation index (e.g. \url{http://citeseer.ist.psu.edu/}.
-Read those papers with a high citation score first
-(a citation index rates papers according to 'academic popularity').  Alternatively,
-read those papers published in 'prestigious' conference proceedings or journals first.
-
-
 \paragraph{Control questions:}
 \begin{enumerate}
 \item Why can we have confidence that the most relevant literature has been identified?
 \item is the related literature grouped in a sensible way such that the reader gets a good understanding of 'existing knowledge' relating to th research questions/problem description?
 \item Is the chapter sufficiently comprehensive?
 \end{enumerate}
+\fi

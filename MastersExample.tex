@@ -32,9 +32,10 @@
 \usepackage{url}
 \usepackage{booktabs}
 \usepackage{gnuplottex} %miktex option if using miktex on windows
-\usepackage{rotating}
+%\usepackage{rotating}
 \usepackage{multirow}
 \usepackage{tabularx}
+\usepackage[figuresright]{rotating}
 
 \definecolor{darkgreen}{rgb}{0,0.5,0}
 \definecolor{darkred}{rgb}{0.5,0.0,0}
@@ -127,7 +128,7 @@
 \bibliography{MastersExample}
 
 \appendix
-%\include{inc/rawdata}
+\input{inc/terminology.tex}
 %\include{inc/timetable}
 
 \end{document}
