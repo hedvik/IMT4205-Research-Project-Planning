@@ -1,4 +1,5 @@
-\chapter{Milestones, deliverables and resources (2-5 pages)}
+\chapter{Milestones, Deliverables and Resources}
+\if{false}
 The purpose of this chapter is to convince the reader that you know exactly what to do.
 This chapter gives a description of how the project is to be
 broken down into smaller parts and activities.
@@ -31,4 +32,136 @@ For each of the activities identified, specify
 At the beginning of this section, provide a 2-3 line summary of the
 resource requirements.  This is particularly useful if you have broken
 down the task into a lot of small tasks.
+\fi
 
+As part of the planning process for the master thesis, it is necessary to define the various milestones, deliverables and needed resources that the thesis consists of. This chapter includes these elements. 
+
+\section{Overall Resource Allocation}
+In order to allocate resources to individual deliverables it is first necessary to provide an estimate on the total amount of possible working hours. If we consider the period between the start of January and June with holidays and weekends excluded we would arrive at \textasciitilde900 hours with 8 hour work days. In order to add some additional buffer though, it might be necessary to work during certain weekends in order to make sure that everything moves along smoothly. In general, the allocation of resources will keep the 900 hours estimate in mind.
+
+\section{Obtaining the Desired Knowledge}
+In order to complete the thesis, it is necessary to have the required knowledge. Most of the general knowledge on redirected walking and distractors has already been acquired through the literature review in this report. Despite this, new research is constantly generated which means that the various literature searches should be periodically updated.
+Outside of general knowledge on the topic it will be necessary to delve deeper into the various redirection algorithms for the sake of implementation. It will also be necessary to acquire some additional knowledge on the estimation of detection thresholds to provide a suitable alternative to existing methods. 
+
+\section{Deliverables}
+The project itself consists of five major deliverables. For each of these, the necessary resources and related milestones are included. 
+
+\subsection{Software for Experiment 1 and 2}
+The first deliverable is the VR game that will be used in experiment 1 and 2. The same software will be used in both experiments, but in slightly different modes. For the first experiment, redirection gains will be increased incrementally until the participant notices it and resets once they have noted this. For the second experiment, average gains will be applied based on the data from experiment 1 to test the effectiveness of redirection in this context. 
+
+\subsubsection{Resources Needed}
+Among the available hours, I would expect a minimum of at least 300 hours to develop the software. The development will start in January and the software should preferably be ready as soon as possible so that experiments can start being conducted. In terms of equipment, a HTC Vive is sufficient for simple testing while the HTC Vive Pro is needed for full testing. Both of these are already available at campus. As such, a fair amount of time will be spent in the VR lab to test the implemented functionality in the software. 
+
+\subsubsection{Milestones}
+The experiment software consists of four major milestones: 
+
+\begin{description}
+\item[Version 0.2: ] Redirection, reset methods and simple distractor activation is functioning.
+\item[Version 0.5: ] Implementation of the game prototype is underway. The game design is finalised.
+\item[Version 0.9: ] The game prototype is finished.
+\item[Version 1.0: ] Detection threshold estimation and experiment data collection is implemented. 
+\end{description}
+
+\subsection{Data Collection: Experiment 1}
+The next deliverable is experiment 1 and its related data collection. This includes finding participants, booking rooms for testing, conducting the experiment itself and analysing the collected data. 
+
+\subsubsection{Resources Needed}
+This is expected to take 50-100 hours depending on how many test subjects it is possible to acquire. It would be preferable to conduct experiment 1 and potentially parts of experiment 2 before Easter as most students will be busy with exams afterwards. 
+
+In terms of any additional purchases it will be necessary to purchase various consumables like chocolate, cookies and candy which can be offered as compensation to participants. It will also be necessary to book a large room where the HTC Vive Pro can be setup so that the experiment can be conducted. Since estimating detection thresholds can take some time it is expected that participants may have to spend a minimum of 30 minutes each with several playtests of the game.  
+
+\subsubsection{Milestones}
+The experiment consists of four progress milestones:
+
+\begin{description}
+\item[0.25: ] Necessary rooms have been booked.
+\item[0.5: ] Participants have been acquired.
+\item[0.75: ] Experiment is finished.
+\item[1.0: ] Experiment data has been extracted and sorted into a presentable format. 
+\end{description}
+
+\subsection{Data Collection: Experiment 2}
+Experiment 2 is expected to take similar amounts of time and resources to experiment 1, but with one key difference. Since this experiment consists of using the estimated gains from experiment 1, each participant only needs to playtest the game once. As such it is expected that each participant only spends \textasciitilde 10 minutes on this experiment which should allow for a larger sample. 
+
+\subsection{Master Thesis}
+The largest part of the project is the master thesis itself. It is generally expected to be worked on incrementally throughout the entire semester with a variety of drafts and versions so that the supervisor can provide sufficient feedback. 
+
+\subsubsection{Resources Needed}
+The master thesis is expected to take \textasciitilde 400-500 hours of work with a preliminary deadline on the 1st of June. In terms of contributions from others it is expected that the supervisor spends time to provide feedback on provided drafts. 
+
+\subsubsection{Milestones}
+The thesis itself consists of four major milestones:
+
+\begin{description}
+\item[Version 0.2: ] General structure is complete. Introduction, Related Work and Methods are mostly finalised unless new research is generated.
+\item[Version 0.6: ] First draft is ready. All experiment results and discussion may not be finished yet, but the rest of the content is finalised. 
+\item[Version 0.8: ] Thesis is mostly finished in terms of content. Proof reading and feedback from the supervisor is needed to finish the thesis. 
+\item[Version 1.0: ] The thesis is finished.
+\end{description}
+
+\subsection{Presentation}
+The final deliverable is the presentation. The presentation is scheduled to take place sometime during the middle of June. As such, time and resource allocation are for this deliverable are not included within the estimated 900 hour resource budget. 
+\subsubsection{Resources Needed}
+The time needed to finish the presentation is expected to be \textasciitilde 50 hours with writing and practice included into the estimation. It might be necessary to book the presentation locale somewhat before the presentation to make sure everything can work as smoothly as possible. Some feedback from the supervisor on the contents and structure of the presentation is also expected.
+
+\subsubsection{Milestones}
+The presentation consists of four milestones:
+\begin{description}
+\item[Version 0.2: ] Content structure is finalised. 
+\item[Version 0.6: ] Presentation is mostly finalised and requires some proofreading.  
+\item[Version 0.8: ] Presentation is finished and requires practice. 
+\item[Version 1.0: ] Presentation is finished and has been practised.
+\end{description}
+
+\section{Overview of Deadlines per Deliverable}
+Set deadlines are generally not ideal in software development outside of the final submission as the development is fluid and dynamic on a per week basis. Despite this, since it is a requirement, this section consists of a table of deadlines generated from the expected amount of hours needed per deliverable. This can be seen in Table~\ref{table:deadlines}.
+
+\begin{table}[h!]
+\centering
+\begin{tabularx}{\textwidth}{|m{6cm}|X|X|} 
+\hline
+Deliverable & Expected Hours of Work & Expected Deadline\\
+\hline
+VR Game for Experiment 1 and 2 & 300 & \textasciitilde 04.03.2019\\\hline
+Data Collection: Experiment 1 & 50-100 & \textasciitilde 25.03.2019\\\hline
+Data Collection: Experiment 2 & 50-100 & \textasciitilde 08.04.2019\\\hline
+Master Thesis & 400-500 & 01.06.2019\\\hline
+Presentation & 50 & \textasciitilde 17.06.2019\\\hline
+\end{tabularx}
+\caption{Overview over expected hours of work needed and deadlines per deliverable}
+\label{table:deadlines}
+\end{table}
+
+\section{Preliminary Table of Contents}
+\begin{description}
+\item[1 ] Introduction
+    \begin{description}
+    \item[1.1 ] Problem Description
+    \item[1.2 ] Justification, Motivation and Benefits
+    \item[1.3 ] Research Questions
+    \item[1.4 ] Contributions
+    \end{description}
+\item[2 ] Related Work
+    \begin{description}
+    \item[2.1 ] Redirected Walking, Detection Thresholds, Cybersickness and Presence
+    \item[2.2 ] Distractors in Redirected Walking
+    \item[2.3 ] Usage of Distractors in the Literature
+    \item[2.4 ] Overall Answers to Research Questions
+    \end{description}
+\item[3 ] Methods
+    \begin{description}
+    \item[3.1 ] Search Terms Used for Literature Acquisition
+    \item[3.2 ] Experiments
+    \item[3.3 ] Experiment Software Overview
+    \end{description}
+\item[4 ] Implementation
+    \begin{description}
+    \item[4.1 ] VR Game
+    \item[4.2 ] Experiment 1
+    \item[4.3 ] Experiment 2
+    \end{description}
+\item[5 ] Results and Discussion: Experiment 1
+\item[6 ] Results and Discussion: Experiment 2
+\item[7 ] Overarching Discussion
+\item[8 ] Conclusion and Future Work
+\end{description}

@@ -1,5 +1,5 @@
-\chapter{Related work}
-In order to see which extent the research questions have been answered by existing work, a literature review has been conducted in this Chapter. The sampling procedure of the literature for this review can be found in Chapter~\ref{chap:methods}. 
+\chapter{Related Work}\label{chap:relatedWork}
+In order to see which extent the research questions have been answered by existing work, a literature review has been conducted in this chapter. The sampling procedure of the literature for this review can be found in Chapter~\ref{chap:methods}. 
 
 \section{Redirected Walking, Detection Thresholds, Cybersickness and Presence}
 Before reviewing the literature on distractors, it would be beneficial to first review the general topic of redirected walking. This Section provides some background as well as relevant existing work within this area.
@@ -51,13 +51,13 @@ Engagement / Distraction & \cite{5072212, schmitz2018you, sra2018vmotion}\newlin
 The variables that are found in Table~\ref{table:DTVariables} are relevant to this study as they can be used to inform the design of the virtual test environment, the use of redirection algorithms depending on available physical space and how to potentially maximise undetectable gains. Furthermore, the study by Azmandian et al.~\cite{azmandian2015physical} provides a means to measure the quality of redirection which is relevant for $r_2$.
 
 \subsection{Comfort and Cybersickness}
-While redirected walking aims at optimising the use of available tracking space and still leverage the benefits of real walking, it can result in some problems. High redirection gains have a tendency to result in cybersickness for the user. In doing so, one of the primary benefits from real walking is lost. Ideally, the increase in cybersickness from redirected walking should be minimised to provide the best user experience while still efficiently using the tracked space. In relation to detection thresholds, Fuglestad's research has shown that there is an additional threshold between noticeable redirection and increases in cybersickness~\cite{fuglestad2018redirected}. This means that it should be feasible to use estimated detection threshold values for redirection without the risk of cybersickness increases, even if the user notices it at times.
+While redirected walking aims at optimising the use of available tracking space and still leverage the benefits of real walking, it can result in some problems. High redirection gains have a tendency to result in cybersickness for the user. In doing so, one of the primary benefits from real walking is lost. Ideally, the increase in cybersickness from redirected walking should be minimised to provide the best user experience while still efficiently using the tracked space. In relation to detection thresholds, Fuglestad's research has shown that there might be an additional threshold between noticeable redirection and increases in cybersickness~\cite{fuglestad2018redirected}. This means that it should be feasible to use estimated detection threshold values for redirection with limited risk of cybersickness increases, even if the user notices it at times.
 
 Outside of high redirection gains, there are also other factors that could increase cybersickness or limit user comfort. Dynamic field of view has for example been shown to potentially increase cybersickness~\cite{norouzi2018assessing}. Women might also be slightly more susceptible to cybersickness than men~\cite{hildebrandt2018get}.
 
 Due to the potential negative implications of standard redirected walking techniques, some researchers have developed new means of redirection. Suma et al. have made use of change blindness as a way to redirect without any type of gains~\cite{suma2011leveraging}. Despite this, their method only works for indoor environments and requires additional engineering for each individual room amongst these. Sra et al. have made use of scene rotation whenever the user is engaged with a task to leverage inattentional blindness~\cite{sra2018vmotion}, but their approach only works with predefined paths. 
 
-From the point of view of a virtual environment designer, it would not be ideal to impose too many restrictions on how the environment is designed. At the same time, it is important to consider that cybersickness should be minimised as much as possible. Not doing so, can result in some ethical ramifications which are discussed in Chapter~\ref{chap:ethics}. For this study in particular, it is helpful to know that cybersickness exists at a higher threshold than detection as this means that estimated gains should be possible to use safely. This knowledge can also be used to inform the method for estimating detection thresholds. 
+From the point of view of a virtual environment designer, it would not be ideal to impose too many restrictions on how the environment is designed. At the same time, it is important to consider that cybersickness should be minimised as much as possible. Not doing so, can result in some ethical ramifications which are discussed in Chapter~\ref{chap:ethics}. For this study in particular, it is helpful to know that cybersickness can exist at a higher threshold than detection as this means that estimated gains should be possible to use safely. This knowledge can also be used to inform the method for estimating detection thresholds. 
 
 \subsection{Sense of Presence}
 Sense of presence is a central part of virtual reality experiences. By properly immersing the user into a virtual world, it is possible to provide an engaging user experience. Sense of presence can be negatively affected by a variety of techniques in redirected walking, which can compromise the overall experience of the user. 
@@ -191,8 +191,8 @@ For the first research question, a variety of variables that can affect detectio
 
 \paragraph{$r_2$}
 Azmanidan et al. have provided a method to measure the effectiveness of redirection by recording the total number of forced reorientations using standard reset techniques~\cite{azmandian2015physical}. Since standard reset techniques can be included as fail-safes for distractors this is relevant to make use of for this study. Furthermore, it also allows for comparison with a control condition that does not make use of any redirection gains as the user will trigger forced reorientation when necessary. 
-\todo{Double check that it is azmandian who made this research method.(ACM was down at the time). Otherwise cite the correct source}
-Breaks in presence and cybersickness are thresholds that generally seem to exist at higher gains than detection. Due to this, it would be reasonable to focus on the highest unnoticeable gains as it should not result in an additional negative impact on the experience of participants. 
+
+Breaks in presence and cybersickness are thresholds that seem to exist at higher gains than detection. Due to this, it would be reasonable to focus on the highest unnoticeable gains as it should not result in an additional negative impact on the experience of participants. 
 
 \if{false}
 The purpose of this chapter
@@ -203,7 +203,7 @@ The purpose of the related work chapter is to:
 \begin{itemize}
 \item Identify to what extent information identified in the 'Research questions'  section is provided in the literature. (yes)
 \item Give an overview of why/how the literature provides the answer to the research questions identified. (yes)
-\item Identify areas/ research questions where the literature appears to be weak or non-existent. (working on it)
+\item Identify areas/ research questions where the literature appears to be weak or non-existent. (yes)
 \end{itemize}
 The Related Work Chapter is NOT:
 \begin{itemize}

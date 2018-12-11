@@ -142,10 +142,11 @@ Conclusion
   }
 }
 
-@article{norouzi2018assessing,
+@inproceedings{norouzi2018assessing,
   title={Assessing Vignetting as a Means to Reduce VR Sickness During Amplified Head Rotations},
   author={Norouzi, Nahal and Bruder, Gerd and Welch, Greg},
   year={2018},
+  booktitle={SAP},
   abstract={
   *  Redirected and amplified head movements have the potential to
 provide more natural interaction with virtual environments (VEs)
@@ -938,6 +939,50 @@ Conclusion
   }
 }
 
+@inproceedings{peck2011evaluation,
+  title={An evaluation of navigational ability comparing Redirected Free Exploration with Distractors to Walking-in-Place and joystick locomotion interfaces},
+  author={Peck, Tabitha C and Fuchs, Henry and Whitton, Mary C},
+  booktitle={Virtual Reality Conference (VR), 2011 IEEE},
+  pages={55--62},
+  year={2011},
+  organization={IEEE},
+  notes={
+  * 
+  }
+}
+
+@inproceedings{peck2010improved,
+  title={Improved redirection with distractors: A large-scale-real-walking locomotion interface and its effect on navigation in virtual environments},
+  author={Peck, Tabitha C and Fuchs, Henry and Whitton, Mary C},
+  booktitle={Virtual Reality Conference (VR), 2010 IEEE},
+  pages={35--38},
+  year={2010},
+  organization={IEEE},
+  notes= {
+  * no predefined waypoints required for IRD
+  * IRD is based on steer to center
+     * Predicted user path is based on the average user heading direction over the past second
+  * Rotation rate is doubled while a distractor is active since previous results suggests that users are less aware of redirection when focusing on visual distractors (cites 2009 paper from Peck)
+     * (I feel like Steinicke or someone else also mentioned this so there probably is some correllations here when citing this specific statement)
+  * old school vr hmd tech used
+  * A ghost distractor that the use has been instructed to follow
+  }
+}
+
+@article{peck2009evaluation,
+  title={Evaluation of Reorientation Techniques and Distrators for Walking in Large Virtual Environments},
+  author={Peck, Tabitha C and Fuchs, Henry and Whitton, Mary C},
+  journal={IEEE Transactions on Visualization and Computer Graphics},
+  volume={15},
+  number={3},
+  pages={383},
+  year={2009},
+  publisher={NIH Public Access},
+  notes={
+  * 
+  }
+}
+
 % Citations from related work sections of other papers
 @inproceedings{suma2012taxonomy,
   title={A taxonomy for deploying redirection techniques in immersive virtual environments},
@@ -1110,51 +1155,6 @@ Conclusion
   }
 }
 
-
-@inproceedings{peck2011evaluation,
-  title={An evaluation of navigational ability comparing Redirected Free Exploration with Distractors to Walking-in-Place and joystick locomotion interfaces},
-  author={Peck, Tabitha C and Fuchs, Henry and Whitton, Mary C},
-  booktitle={Virtual Reality Conference (VR), 2011 IEEE},
-  pages={55--62},
-  year={2011},
-  organization={IEEE},
-  notes={
-  * 
-  }
-}
-
-@inproceedings{peck2010improved,
-  title={Improved redirection with distractors: A large-scale-real-walking locomotion interface and its effect on navigation in virtual environments},
-  author={Peck, Tabitha C and Fuchs, Henry and Whitton, Mary C},
-  booktitle={Virtual Reality Conference (VR), 2010 IEEE},
-  pages={35--38},
-  year={2010},
-  organization={IEEE},
-  notes= {
-  * no predefined waypoints required for IRD
-  * IRD is based on steer to center
-     * Predicted user path is based on the average user heading direction over the past second
-  * Rotation rate is doubled while a distractor is active since previous results suggests that users are less aware of redirection when focusing on visual distractors (cites 2009 paper from Peck)
-     * (I feel like Steinicke or someone else also mentioned this so there probably is some correllations here when citing this specific statement)
-  * old school vr hmd tech used
-  * A ghost distractor that the use has been instructed to follow
-  }
-}
-
-@article{peck2009evaluation,
-  title={Evaluation of Reorientation Techniques and Distrators for Walking in Large Virtual Environments},
-  author={Peck, Tabitha C and Fuchs, Henry and Whitton, Mary C},
-  journal={IEEE Transactions on Visualization and Computer Graphics},
-  volume={15},
-  number={3},
-  pages={383},
-  year={2009},
-  publisher={NIH Public Access},
-  notes={
-  * 
-  }
-}
-
 @inproceedings{suma2011leveraging,
   title={Leveraging change blindness for redirection in virtual environments},
   author={Suma, Evan A and Clark, Seth and Krum, David and Finkelstein, Samantha and Bolas, Mark and Warte, Zachary},
@@ -1252,9 +1252,38 @@ Conclusion
 
 
 
+%%%%%%%%%%%%%%%%%%%%% Non literature review papers
+@inproceedings{azmandian2016redirected,
+  title={The redirected walking toolkit: a unified development platform for exploring large virtual environments},
+  author={Azmandian, Mahdi and Grechkin, Timofey and Bolas, Mark and Suma, Evan},
+  booktitle={Everyday Virtual Reality (WEVR), 2016 IEEE 2nd Workshop on},
+  pages={9--14},
+  year={2016},
+  organization={IEEE}
+}
+
+@inproceedings{williams2007exploring,
+  title={Exploring large virtual environments with an HMD when physical space is limited},
+  author={Williams, Betsy and Narasimham, Gayathri and Rump, Bjoern and McNamara, Timothy P and Carr, Thomas H and Rieser, John and Bodenheimer, Bobby},
+  booktitle={Proceedings of the 4th symposium on Applied perception in graphics and visualization},
+  pages={41--48},
+  year={2007},
+  organization={ACM}
+}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Misc
+@misc{unityHomepage,
+title={Unity Engine - Homepage},
+howpublished={\url{https://unity3d.com/}},
+note={(Last Visited on 07.12.2018)}
+}
 
+@misc{githubHomepage,
+title={GitHub - Homepage},
+howpublished={\url{https://github.com/}},
+note={(Last Visited on 07.12.2018)}
+}
 
 % Template Related
 @article{avizienis2004,

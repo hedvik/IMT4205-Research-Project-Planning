@@ -1,13 +1,19 @@
-\chapter{Introduction (1-2 pages)}
+\chapter{Introduction}
+\if{false}
 The introduction chapter should not include detailed information on
 how you intend to solve the problem, what you're going to do etc.
 This belongs more in the 'method' and 'feasibility study' section
 of the research proposal.
 
 Make sure you read several of the past project proposals.
-Make your own judgment on how 'good' they are.
+Make your own judgement on how 'good' they are.
+\fi
 
-\section{Topic covered by the project}
+\section{Topic Covered by The Project}
+This project covers the topic of redirected walking and a particular subarea in this field known as virtual distractors(or simply distractors). A problem with current day room scale solutions in virtual reality is that we often do not have a large amount of space to move around in for these types of experiences. Redirected walking aims to mitigate this problem by unnoticeably redirecting the user while they walk around to create the illusion of a fully explorable virtual world~\cite{razzaque2001redirected}. By doing so, it is possible to make better use of the available physical space while still creating an immersive experience. Despite this, redirected walking by itself is not sufficient enough to properly redirect the user in smaller physical spaces~\cite{5072212,azmandian2015physical}. By engaging the user with distractors on the other hand, it is possible to increase the degree of unnoticeable redirection while still keeping a high subjective sense of presence~\cite{peck2009evaluation}. These could be anything from activities in the virtual world to objects that can keep the user's attention.  
+
+
+\if{false}
 This section specifies the general area of the project.
 It should preferably be understandable by everybody,
 also those not familiar with the field. (e.g. all your relations and friends).
@@ -30,22 +36,13 @@ to be able to carry out the project?
 \item Is it focused or is it just a non-focused brain dump going all over the place?
 \item Is it clear from the text what skills would be required/beneficial in order to do/participate in the project?
 \end{enumerate}
-
+\fi
 
 \section{Keywords}
-There are several sources of keywords. Rather than 'inventing your own' you should select an appropriate set of keywords from a reputable source such as the one published by the IEEE computer society (IEEE Computer Society - Keywords) or ACM (ACM Computing Classification System).
-%\protect\url{http://www.computer.org/portal/site/ieeecs/menuitem.c5efb9b8ade9096b8a9ca0108bcd45f3/index.jsp?&pName=ieeecs_level1&path=ieeecs/publications/author/keywords&file=ACMtaxonomy.xml&xsl=generic.xsl&},
-The taxonomy by Avizienis et al\cite{avizienis2004} provides an overview of of the subject area and an alternative set of keywords/classifications.
-
-\paragraph{Control questions:}
-\begin{enumerate}
-\item Does the collection of keywords 'pin down' the project or is it to 'wide'?
-\item Are the keywords too specific, making it difficult  for people with a closely related interest to recognize the keywords?
-\item Why is it likely that a person working in the field would use the keywords you have selected when doing a search in this area?
-\item Is the number of keywords appropriate?
-\end{enumerate}
+Virtual Reality, Redirected Walking, Distractor, Distractors, Immersion, Subjective Sense of Presence, Computer Games, Games
 
 \section{Problem description}
+\if{false}
 What's 'wrong' with the world we're living in? E.g.
 \begin{itemize}
 \item   Something is currently too difficult.
@@ -61,8 +58,12 @@ What's 'wrong' with the world we're living in? E.g.
 \item If you were to check if your problem description was understood, what question(s) would you ask?
 \item What is the information density of your text and why?
 \end{enumerate}
+\fi
 
-\section{Justification, motivation and benefits}
+Redirected walking by itself mostly achieves full effectiveness in large rooms which are unfeasible for most users. As an example: it is necessary to have a room with enough space for a circle with a radius of 22 meters to entirely redirect the user in an unnoticeable manner~\cite{5072212, azmandian2015physical}. This is not only unfeasible for the average end-user to have, but also unfeasible for many modern head-mounted displays as it is challenging to track areas of this size. In smaller physical spaces, the user is expected to be told by the software to reorient themselves a fair amount whenever they are close to the physical walls. These reorientation events can break the user's subjective sense of presence and does not necessarily contribute to a good virtual experience. 
+
+\section{Justification, Motivation and Benefits}
+\if{false}
 This section should be understandable by everybody including your family and relatives.
 In particular, it should be understandable to those who will benefit.
 NOTE : 'I want to do zz' does not count as a legitimate motivation!
@@ -82,8 +83,12 @@ This can be used to substantiate your claim that the problem you are adressing i
 \item If the project results was to be put in an auction when the project was completed - what price would it fetch and who would put in what bids? 
 \item What would be the overall ROI (Return On Investment) of your project if carried out?
 \end{enumerate}
+\fi
 
-\section{Research questions}\label{research:questions}
+The limitations of physical space mean that it is all the more important to make sure that reorientation events are as effective and unintrusive to the user as possible~\cite{azmandian2015physical}. The primary benefits of a good redirected walking solution lie with the end-user as it allows them to experience virtual reality in a more immersive manner as well as providing lower amounts of cybersickness compared to other forms of locomotion~\cite{razzaque2001redirected, peck2011evaluation}. It allows the user to walk around in a virtual world that is larger than their available physical space which could be seen as a crucial part of the experience. It also provides some benefits to the developers of VR software as they do not have to rely on the limits of physical space to the same degree as they currently do. While there has been some research on the topic of distractors over the years, it is not a large field of research. As such, it would be beneficial to conduct additional research into this field. The usage of distractors for the sake of reorientation is particularly useful as they focus on reorienting in a manner that aims to provide the least amount of intrusion into the experience.
+
+\section{Research Questions}\label{research:questions}
+\if{false}
 Describe the types of information you need in order to solve the research problem, e.g.
 We need to find out
 \begin{itemize}
@@ -101,14 +106,16 @@ We need to find out
 \item What other research questions might also be relevant?
 \item why/why not are the chosen research questions the most relevant?
 \end{enumerate}
+\fi
 
-* What is the problem?
-   * most people do not have the space for allowing the user to walk within a 22m radius circle at unnoticeable gains
-
-* How noticeable is redirected walking with distractors in a playful virtual environment? (R1)
-* Given the highest unnoticeable gains, how effective is redirected walking with distractors in a playful virtual environment? (R2)
+One area in particular that research on distractors in redirected walking does not seem to have delved much into is measuring how they affect the noticeability of redirection. Furthermore, if the highest unnoticeable redirection with distractors was estimated, it would also be interesting to see how effective the redirection could be in the context of a virtual environment like a game. The reason for using games as a context is that their interactive nature allows to broaden the design space of distractors in a manner that could be more engaging for the user. As such, the following research questions have been established:
+\begin{description}
+\item[$R_1$: ] How noticeable is redirected walking with distractors in a playful virtual environment?
+\item[$R_2$: ] Given the highest unnoticeable gains, how effective is redirected walking with distractors in a playful virtual environment?
+\end{description}
 
 \section{Planned contributions}
+\if{false}
 A short summary of what kind of {\em new} results the master thesis will produce.  
 Ideally,  the potential novelty of the results should be justified by means of references provided.
 E.g. if an article describes the problem you will be adressing as {\em unsolved},
@@ -124,3 +131,6 @@ will be to produce the new results identified in this section.
 \item Why/why not are the contributions 'significant'?
 \item Why/why not is it realistic that the planned contribution can be achieved?  You may want to have a look at relevant literature/ other completed master thesis to answer this question.
 \end{enumerate}
+\fi
+
+The master thesis aims to fulfil a few different goals. First of all, it aims to provide an example of how noticeable redirected walking is when using state of the art distractors. The reason for saying it will provide an example is that the design space for distractors is vast and as such, some implementations might be more effective than others. Furthermore, the thesis aims to contribute to a field of research that currently is reasonably small. Due to the size of this field, it would be beneficial to provide additional results that can point towards the effectiveness and noticeability of redirected walking with distractors. By doing so, it is possible to validate existing research as well as providing data that can be used for consideration by other researchers with interest in the topic. 

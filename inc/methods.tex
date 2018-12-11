@@ -1,4 +1,6 @@
-\chapter{Choice of methods (2-5 pages)}\label{chap:methods}
+\chapter{Choice of Methods}\label{chap:methods}
+
+\if{false}
 This section is to include a description of the methods to be used,
 including references to literature describing the methods to be used
 (e.g. qualitative, quantitative, interviews, surveys,
@@ -9,59 +11,104 @@ the chapter is to explain why the method is
 \item appropriate
 \item likely to provide the desired knowledge/information.
 \end{itemize}
+\fi
+This chapter consists of the methods that are planned to be used in the master thesis as well as methods that already have been used to review the literature. 
 
-\section{Search terms used for literature search}
+\section{Search Terms Used for Literature Acquisition}
+In order to find relevant literature for the literature analysis in Chapter~\ref{chap:relatedWork} a variety of search terms and databases were used. The list of keywords, keyword combinations and literature databases that were used can be found in Table~\ref{table:literaturekeywords}. 
+Similar searches were also conducted with the ACM digital library database, but these searches did not seem to provide any additional literature that had not already been found in other searches. As such, these queries are not included in the table.
+
 \begin{table}[h!]
 \centering
-\begin{tabularx}{\textwidth}{|X|m{1.7cm}|X|m{1.5cm}|m{1.20cm}|X|} 
+\begin{tabularx}{\textwidth}{|m{2cm}|m{1.7cm}|m{2.7cm}|m{1.5cm}|m{1.20cm}|m{3.375cm}|} 
 \hline
 Keywords & Database & Combination & Filter & Results & Chosen\newline for Reading\\ 
 \hline
 "Redirected Walking"\newline
 "Threshold"\newline
 "Thresholds"\newline
-"Comfort"& Google Scholar & ("redirected walking") AND ("threshold" OR "thresholds") AND "comfort" & After 2014 & 55 & ?\\ 
+"Comfort"& Google Scholar & ("redirected walking") AND ("threshold" OR "thresholds") AND "comfort" & After 2014 & 55 & 5\\ 
 \hline
 "Redirected Walking"\newline
 "Threshold"\newline
-"Thresholds" & IEEEXplore & "redirected walking" AND ("threshold" OR "thresholds") & None & 13 & ?\\ 
+"Thresholds" & IEEEXplore & "redirected walking" AND ("threshold" OR "thresholds") & None & 13 & 5\\ 
 \hline
 "Redirected Walking"\newline
 "Distractor"\newline
-"Distractors" & Google Scholar & ("redirected walking") AND ("Distractor" OR "Distractors") & After 2016 & 70 & ?\\
+"Distractors" & Google Scholar & ("redirected walking") AND ("Distractor" OR "Distractors") & After 2016 & 70 & 3\\
 \hline
 "Redirected Walking"\newline
 "Distractor"\newline
-"Distractors" & Google Scholar & ("redirected walking") AND ("Distractor" OR "Distractors") & None & 166 & ?\\
+"Distractors" & Google Scholar & ("redirected walking") AND ("Distractor" OR "Distractors") & None & 166 & 3\\
 \hline
 \end{tabularx}
 \caption{List over keywords and combinations that were used for the literature search}
 \label{table:literaturekeywords}
 \end{table}
-    
-    * Gain thresholds/General RW papers
-        * Papers were picked for reading as long as title/abstract focused on factors related to general user comfort and detection/gain thresholds for RW
-        * (There are several papers on redirection using eye saccades or eye blinks, but these are not as relevant for the consumer headsets we have today as they require special hardware)
-        * 4(5 if you count Bjørn's master thesis) relevant papers found using Google Scholar with after 2014 as filter
-        * 5 relevant papers found using IEEEXplore
-    * Distractors
-       * first search was primarily conducted to look for state of the art applications of distractors
-       * A second search was also conducted to get more background literature
-          * First three pages was scanned through for background
-    * Search terms from APW
-       * Cinematic VR and guiding attention is a related field
-       * Some literature was acquired from this field
-       * TODO: Add these to the list as they provided some relevant papers and mention the context of the search
-    * Similar searches were also conducted with the ACM digital library, but these searches did not provide any additional literature that already were found in other searches. Thus these queries are not included in the table.
 
-\section{Measurement of Detection Thresholds}
+\subsubsection{General Literature on Redirected Walking and Detection Thresholds}
+For the first two queries in Table~\ref{table:literaturekeywords}, literature was picked for reading as long as the title or abstract focused on either detection thresholds or user comfort. Several papers were discussing the use of eye saccades or eye blinks for redirection purposes, but these were not seen as relevant. The reason for this is that currently available consumer HMD's like the HTC Vive or HTC Vive Pro do not include eye tracking. As such, it would not be possible to make use of that research in this project.
 
-\section{Measuring Effectiveness of Redirected Walking}
+\subsubsection{Distractors}
+Table~\ref{table:literaturekeywords} also consists of two queries related to distractors. The first of these was conducted to look for state of the art applications of distractors while the second was to acquire background literature on the topic. For the first search, all pages of query results were scanned through. For the second search, the first three pages of results were scanned through due to the higher sample. Literature was chosen for reading based on similar criteria as the rest of the queries.
+       
+\subsubsection{Literature Acquired from Search Queries in Advanced Project Work}
+An additional \textbf{3} research papers were acquired from separate search queries in the IMT4894 Advanced Project Work course as they could be seen as relevant to this report. Of particular note, Nielsen et al.'s paper on guided attention in cinematic VR~\cite{nielsen2016missing} was acquired from this query. 
 
-\section{Plan For Experimental Environment}
-\subsection{Technology}
-* Unity
-   * RDW Toolkit, might require some adaptions as it is made in a older version of Unity
-* Vive Pro
-\subsubsection{Physical Space}
-* A 10m x 10m environment would be preferred to make best use of redirection techniques and the Vive Pro's additional tracking length. 
+\subsubsection{Literature Acquired Through Citations}
+Finally, an additional \textbf{3} papers were added from citations in the other papers that were sampled for the review. This puts the total amount of literature that was acquired at \textbf{22} papers for the literature review in Chapter~\ref{chap:relatedWork}.
+
+\section{Experiments}
+In order to acquire the necessary results from the two research questions, two experiments are needed. The first of these consists of estimating detection thresholds with fully integrated distractors while the second makes use of the estimated thresholds to test the performance of redirection. The following subsections describe the details on how the experiments will be handled as well as some commonalities for both. 
+
+\subsection{Pre-Test Questionnaire and Informing Participants}
+For both of these experiments, a pre-test questionnaire will be used to acquire demographical data. Before participating, all subjects will be briefed on the structure and purpose of the experiment. Participants will also be told that they should stop the experiment if they start to feel dizzy or nauseous. While current research suggests that detection and cybersickness are two separate thresholds~\cite{fuglestad2018redirected}, there are still other factors like aptitude and experience with VR that could affect cybersickness~\cite{hildebrandt2018get}. The results of participants that cancel the experiment will not be discarded as it still could be of value to the study. 
+
+\subsection{Experiment 1: Measurement of Detection Thresholds}
+The goal of experiment 1 is to measure detection thresholds for curvature and rotation gains. Translation gains can stay static at a low value to allow for slightly larger worlds relative to physical space. The reason for measuring both curvature and rotation gains at the same time is that it might be too reductive to measure detection thresholds for them individually. Since experiment 2 will make use of both, they should therefore be measured together as the overall detection thresholds could be different from using them in isolation.
+
+The method for measuring detection thresholds will be slightly different from the already established method by Steinicke et al.~\cite{5072212} due to reasons outlined in Chapter~\ref{chap:ethics}. Instead of measuring a range of gains that are randomly assigned and uniformly distributed, both curvature and rotation gains will start at their base values of 1. Curvature gains will gradually increase at a non-independent random timestep to prevent the participant from learning the timing of gain increases. These gains will increase with a fixed value which is added together with some random noise. Rotation gains on the other hand, will only be active once a distractor has been triggered. It would be preferable to delay their activation until the viewing direction of the participant has stabilised as well. Rotation gains will be increased in a similar way to curvature gains, but with an added fixed value on activation as the participant should be less likely to notice gains during distraction.
+
+Before starting the experiment, the participant will be informed that they should press a button on their controller whenever they notice that they are being redirected. Whenever this is done, the current active gains will be halved. One of the reasons for halving the gains instead of fully resetting them is that it speeds up the measurement process. Another reason is that once a participant has tested for a long enough time, a default gain of 1 might feel unnatural so simply halving the current gains provides less of a difference. 
+
+\subsection{Experiment 2: Measuring Effectiveness of Redirection}
+The second experiment will be focused on measuring the effectiveness of redirection by applying the estimated gains from experiment 1. This experiment consists of two conditions:
+
+\begin{description}
+\item[Control Condition: ] No redirection is applied.
+\item[Experiment Condition: ] Redirection is applied using estimated gains from experiment 1. 
+\end{description}
+
+While there is a difference in usage of redirection in both conditions, a shared trait will be that both make use of reset methods to reorient the user when they reach the physical bounds. By structuring the experiment in this way, it is possible to make use of Azmandian et al. 's method for measuring the relative effectiveness of redirection~\cite{azmandian2015physical}. The formula for measuring relative effectiveness is as follows:
+$$
+\frac{Resets_{Control} - Resets_{Experiment}}{Resets_{Control}}
+$$
+
+This provides the percentage increase in effectiveness based on the number of resets that each condition results in. By doing so, it is possible for the virtual experience to stay the same between both conditions as it is necessary to integrate distractors with game mechanics. 
+
+\section{Plan For Experiment Software}
+Both experiments will be using the same software. This will be a small VR game that is designed around fully integrated distractors and moving around in a virtual space. 
+
+\subsection{Development Environment and Technology}
+In terms of developing the game, the plan is to use the Unity Engine\footnote{\url{https://unity3d.com/}} with the Microsoft Visual Studio IDE as it is the game engine I have the most experience with. Furthermore, there is a redirected walking toolkit available for Unity which could be made use of~\cite{azmandian2016redirected}. The toolkit was made for an older version of the engine which means that it might need to be reworked slightly to function appropriately, but the toolkit is open source so it could provide a good baseline. The source code for the project will be stored publicly on GitHub\footnote{\url{https://github.com/}} using Git as the version control system. By keeping the code open source, it could potentially be of use for future development within the area of research. 
+
+When it comes to technology, the plan is to use the HTC Vive Pro as it allows for the largest possible tracking space among the available HMD's on campus. The SteamVR library which is used to work with the HTC Vive Pro also has good integration with Unity which should help with development.
+
+\subsection{Use of Redirection Algorithms}
+In terms of redirection algorithms, the plan for curvature gains is to use the steer-to-centre algorithm as it performs better than its alternatives in physical tracking spaces under 15m x 15m~\cite{azmandian2015physical}. Since the HTC Vive Pro has a maximum tracking space of 10m x 10m, then this would be the most logical choice. Distractor activation will be handled similarly to other existing work where ''safe bounds'' are defined within the physical space. An example of this would be to have square-shaped safe bounds with a size of 7.5m x 7.5m in a physical space that is 10m x 10m. Whenever the user leaves these bounds, a distractor is triggered with the aim to reorient the user back towards the centre of it. 
+
+\subsection{Use of Forced Reorientation Algorithms}
+Among the standard methods for forced reorientation, there are three potential options~\cite{williams2007exploring}:
+\begin{description}
+\item[Freeze - Backup: ] The user is notified that they have reached the physical bounds and their virtual position is frozen. They are instructed to take steps backwards until the experience is unfrozen. 
+\item[Freeze - Turn: ] The user is notified that they have reached the physical bounds and the HMD display is frozen. They are instructed to turn 180 degrees, after which the display is unfrozen. 
+\item[2:1 - Turn: ] The user is notified that they have reached the physical bounds. They are instructed to turn 360 degrees virtually while a rotation gain of 2 is applied. This results in a 360-degree turn in the virtual world and 180 in the real world.
+\end{description}
+
+Regarding intrusiveness, the 2:1 Turn technique could be seen as the least intrusive among the three with Freeze Turn being a second alternative. The primary risk of using the 2:1 Turn technique would be that the rotational gains are rather high which could result in cybersickness. At the same time, the user should be aware of the reorientation, and it only stays active for a short time. In general though, it might be best to first do some internal testing between Freeze Turn and 2:1 Turn before deciding which one should be used.
+
+\subsection{Physical Space}
+For physical space, a 10m x 10m environment would be preferred to make the best use of redirection techniques and the Vive Pro's maximum tracking length. This would preferably be a square shaped space as this was considered the best choice from Azmandian et al.'s results~\cite{azmandian2015physical}.
+
+\subsection{VR Game}
+It is out of scope for this plan to fully design the VR game as additional requirements might change at the start of the next semester. Despite this, there are some central requirements which will be necessary to consider regardless of design. In general, the game itself has to be fully integrated with distractors. This means that a large part of the mechanics will be based on the usage of distractors. The art style of the virtual environment should preferably be simple to not result in too much optical flow as it can affect noticeability of redirection~\cite{8446225, steinicke2008moving, 8446216}. As such, a low-polygon art-style might be preferred as they generally do not use textures which could increase optical flow. The final requirement is that the virtual environment needs to be relatively open with plenty of space to walk around in for the sake of redirection.
